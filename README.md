@@ -109,7 +109,7 @@ Requisitos:
 - pip o poetry
 
 Instalación:
-git clone https://github.com/tuusuario/monitor-subastas-valencia.git
+git clone https://github.com/gspott/monitor-subastas-valencia.git
 cd monitor-subastas-valencia
 pip install -r requirements.txt
 
