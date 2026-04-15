@@ -1,166 +1,138 @@
 # Monitor Subastas Valencia
 
-Monitor automatizado de subastas oficiales en España, enfocado en la provincia de Valencia/València.
-Agrega, normaliza y analiza datos de múltiples fuentes públicas para detectar oportunidades de inversión
-sin recopilar datos personales.
+`monitor-subastas-valencia` is a local BOE auction monitor focused on Valencia/València. It fetches public auction data, normalizes it, stores it in SQLite, exposes a Streamlit dashboard, and includes lightweight local automation for manual and weekly runs.
 
-------------------------------------------------------------
-OBJETIVO
-------------------------------------------------------------
+The repository is currently optimized for local use on macOS.
 
-Construir un sistema que:
-- Agregue subastas oficiales (BOE, TGSS, etc.)
-- Filtre por Valencia/València
-- Excluya vehículos
-- Evite datos personales
-- Detecte oportunidades mediante scoring
-- Genere reportes semanales
+## Requirements
 
-------------------------------------------------------------
-FUENTES DE DATOS
-------------------------------------------------------------
-
-- Portal de Subastas del BOE (principal)
-- Seguridad Social (TGSS)
-- API / Sumario del BOE
-- Fuentes públicas adicionales (Generalitat Valenciana, patrimonio público)
-
-------------------------------------------------------------
-FUNCIONALIDADES
-------------------------------------------------------------
-
-- Ingesta automática por fuente
-- Normalización de datos
-- Eliminación de duplicados
-- Filtro de privacidad (sin datos personales)
-- Sistema de scoring de oportunidades
-- Exportación a CSV / JSON
-- Reportes semanales
-
-------------------------------------------------------------
-CRITERIOS DE FILTRADO
-------------------------------------------------------------
-
-Incluye:
-- Inmuebles
-- Otros bienes muebles (no vehículos)
-
-Excluye:
-- Vehículos
-- Datos personales (nombres, DNI, etc.)
-
-------------------------------------------------------------
-ARQUITECTURA
-------------------------------------------------------------
-
-monitor-subastas-valencia/
-  src/monitor/
-    sources/
-    normalize.py
-    dedupe.py
-    scoring.py
-    storage.py
-    exports.py
-    main.py
-
-------------------------------------------------------------
-ESQUEMA DE DATOS (SIMPLIFICADO)
-------------------------------------------------------------
-
-Campos principales:
-- source
-- external_id
-- title
-- province
-- municipality
-- asset_class
-- asset_subclass
-- is_vehicle
-- official_status
-- publication_date
-- opening_date
-- closing_date
-- appraisal_value
-- starting_bid
-- current_bid
-- deposit
-- occupancy_status
-- encumbrances_summary
-- description
-- official_url
-
-------------------------------------------------------------
-SCORING DE OPORTUNIDADES
-------------------------------------------------------------
-
-El sistema prioriza subastas en función de:
-- Descuento sobre tasación
-- Ausencia de ocupación conocida
-- Cargas reducidas
-- Baja competencia (pocas pujas)
-- Ubicación en Valencia
-
-------------------------------------------------------------
-EJECUCIÓN
-------------------------------------------------------------
-
-Requisitos:
+- macOS
 - Python 3.10+
-- pip o poetry
 
-Instalación:
-git clone https://github.com/gspott/monitor-subastas-valencia.git
-cd monitor-subastas-valencia
-pip install -r requirements.txt
+## Installation
 
-Ejecución manual:
-python -m monitor.main
+Create a local virtual environment and install the project:
 
-Programación semanal (cron):
-0 8 * * 1 /usr/bin/python3 /ruta/monitor/main.py
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e ".[web]"
+```
 
-------------------------------------------------------------
-SALIDAS
-------------------------------------------------------------
+If you also want the test tools:
 
-- data/new_auctions.csv
-- data/changed_auctions.csv
-- data/all_active_valencia.csv
+```bash
+pip install -e ".[web,dev]"
+```
 
-------------------------------------------------------------
-CONSIDERACIONES LEGALES
-------------------------------------------------------------
+## Configuration
 
-- Solo se usan datos públicos accesibles
-- No se almacenan datos personales
-- Se aplica el principio de minimización
-- Uso orientado a análisis interno
+Create your local environment file from the example:
 
-------------------------------------------------------------
-TESTING
-------------------------------------------------------------
+```bash
+cp .env.example .env.launchd
+```
 
-pytest
+Available variables:
 
-------------------------------------------------------------
-ROADMAP
-------------------------------------------------------------
+```dotenv
+TELEGRAM_BOT_TOKEN=your_token_here
+TELEGRAM_CHAT_ID=your_chat_id_here
+TELEGRAM_ONLY_TOP_OPPORTUNITIES=true
+TELEGRAM_SEND_IF_NO_CHANGES=false
+MONITOR_DASHBOARD_URL=http://127.0.0.1:8501
+```
 
-- [ ] Integración completa BOE
-- [ ] Integración TGSS
-- [ ] Sistema de alertas
-- [ ] Dashboard web
-- [ ] Mejora del scoring
+Telegram is optional for local exploration, but required if you want alert delivery.
 
-------------------------------------------------------------
-CONTRIBUCIÓN
-------------------------------------------------------------
+Do not commit `.env`, `.env.launchd`, logs, or runtime outputs.
 
-Pull requests bienvenidas.
-El objetivo es construir una herramienta robusta, legal y útil para análisis de subastas.
+## Usage
 
-------------------------------------------------------------
-LICENCIA
-------------------------------------------------------------
+### Recommended macOS flow
 
-MIT
+Double-click:
+
+```text
+scripts/open_monitor_app.command
+```
+
+This launcher:
+
+- starts the local Flask web app if needed;
+- starts the Streamlit dashboard if needed;
+- opens the browser at `http://127.0.0.1:8765`.
+
+### Manual alternative
+
+Start the local web app directly:
+
+```bash
+.venv/bin/python apps/monitor_runner_web.py
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8765
+```
+
+## Dashboard
+
+The dashboard is a Streamlit app served locally on:
+
+```text
+http://127.0.0.1:8501
+```
+
+It can be launched manually with:
+
+```bash
+.venv/bin/streamlit run scripts/monitor_dashboard.py
+```
+
+## Main monitor cycle
+
+The full local monitor cycle runs with:
+
+```bash
+.venv/bin/python -m scripts.run_full_monitor_cycle
+```
+
+The web runner also supports:
+
+- `Partial`: normal incremental execution
+- `Full`: forces a full refresh of completed auctions
+
+## Automation (optional)
+
+macOS `launchd` support is included for weekly runs.
+
+Useful files:
+
+- `scripts/run_weekly.sh`
+- `scripts/install_launchd_weekly.sh`
+- `scripts/launchd/com.carlosblanco.monitor-subastas-valencia.weekly.plist`
+
+The launchd plist inside the repository is a template. `scripts/install_launchd_weekly.sh` renders it with the real local project path before installing it.
+
+## Notes
+
+- This project is currently designed primarily for macOS.
+- Python 3.10+ is recommended.
+- The BOE integration is conservative and evolves incrementally.
+- Do not upload `.env`, `.env.launchd`, `logs/`, `output/`, SQLite files, or generated app bundles.
+
+## Development
+
+Run tests:
+
+```bash
+.venv/bin/python -m pytest -q
+```
+
+Compile key modules:
+
+```bash
+.venv/bin/python -m compileall src scripts apps tests
+```

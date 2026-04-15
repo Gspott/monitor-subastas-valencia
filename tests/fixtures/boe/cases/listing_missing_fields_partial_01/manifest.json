@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "case_id": "listing_missing_fields_partial_01",
+  "source": "boe",
+  "page_kind": "listing",
+  "fixture_status": "sanitized_from_raw",
+  "origin_url": "https://subastas.boe.es/subastas_ava.php?campo%5B2%5D=SUBASTA.ESTADO.CODIGO&dato%5B2%5D=EJ&campo%5B3%5D=BIEN.TIPO&dato%5B3%5D=M&campo%5B8%5D=BIEN.COD_PROVINCIA&dato%5B8%5D=28&campo%5B18%5D=SUBASTA.FECHA_INICIO&dato%5B18%5D%5B0%5D=&dato%5B18%5D%5B1%5D=&page_hits=40&sort_field%5B0%5D=SUBASTA.FECHA_FIN&sort_order%5B0%5D=desc&accion=Buscar",
+  "capture_date": "2026-04-09",
+  "raw_file": "../../raw/listing_missing_fields_partial_01/raw.html",
+  "sanitized_file": "sanitized.html",
+  "expected_file": "expected.json",
+  "sanitizer_version": 1,
+  "notes": "Public BOE listing with heterogeneous non-vehicle cards and one partial item without expediente."
+}

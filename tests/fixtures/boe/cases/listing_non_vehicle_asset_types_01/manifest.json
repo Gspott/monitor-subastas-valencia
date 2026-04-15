@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "case_id": "listing_non_vehicle_asset_types_01",
+  "source": "boe",
+  "page_kind": "listing",
+  "fixture_status": "sanitized_from_raw",
+  "origin_url": "https://subastas.boe.es/subastas_ava.php?campo%5B2%5D=SUBASTA.ESTADO.CODIGO&dato%5B2%5D=EJ&campo%5B8%5D=BIEN.COD_PROVINCIA&dato%5B8%5D=46&page_hits=40&sort_field%5B0%5D=SUBASTA.FECHA_FIN&sort_order%5B0%5D=desc&accion=Buscar",
+  "capture_date": "2026-04-09",
+  "raw_file": "../../raw/listing_non_vehicle_asset_types_01/raw.html",
+  "sanitized_file": "sanitized.html",
+  "expected_file": "expected.json",
+  "sanitizer_version": 1,
+  "notes": "Public BOE listing with heterogeneous non-vehicle asset types in Valencia."
+}

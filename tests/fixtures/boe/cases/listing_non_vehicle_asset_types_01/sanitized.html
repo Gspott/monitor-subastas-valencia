@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Portal de Subastas Electr&#xF3;nicas</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="Keywords" content="Subastas">
+    <meta name="Description" content="Portal de Subastas de la Agencia Estatal Bolet&#xED;n Oficial del Estado">
+    <!--[if lt IE 10]>
+    <link rel="stylesheet" type="text/css" href="/estilos/subastas_ie9.css" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="/estilos/subastas_ie8.css" />
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="/estilos/portalSubastas.css" title="comun" type="text/css"/>
+    <link rel="stylesheet" href="/estilos/buscar.css" title="comun" type="text/css"/>
+  </head>
+  <body>
+    <!-- Cabecera -->
+    <div id="cabecera">
+      <!-- Accesibilidad -->
+      <ul class="fuera">
+        <li><a accesskey="c" href="#contenido">Ir a contenido</a></li>
+      </ul>
+      <!-- Comienza la franja blanca con logos y enlaces a la derecha -->
+      <div id="logoInicio">
+        <span class="pc tablet" id="logoPresidenciaMovil">
+          <a href="https://www.mpr.gob.es/" title="Ir al Ministerio de la Presidencia">
+            <img src="/imagenes/logoMPRmovil.png" alt="Ministerio de la Presidencia">
+          </a>
+        </span>
+        <span id="logoPresidencia">
+          <a href="https://www.mpr.gob.es/" title="Ir al Ministerio de la Presidencia">
+            <img src="/imagenes/logoMPR.png" srcset="/imagenes/logoMPR.svg" alt="Ministerio de la Presidencia">
+          </a>
+        </span>
+        <span class="movil">
+          <a href="/" title="Ir a la p&#xE1;gina de inicio">
+            <img alt="Portal de Subastas" src="/imagenes/portal_subastas_270.png" srcset="/imagenes/portal_subastas_270.svg" />
+          </a>
+        </span>
+      </div><!-- Fin de logoInicio -->
+      <h1>
+        <a href="/" title="Ir a la p&#xE1;gina de inicio">
+          Portal de Subastas
+        </a>
+      </h1>
+      <p class="fuera">Portal de Subastas de la Agencia Estatal Bolet&#xED;n Oficial del Estado</p>
+      <span id="logoBOE">
+        <a href="https://www.boe.es" title="Ir a la p&#xE1;gina de la Agencia Estatal Bolet&#xED;n Oficial del Estado">
+          <img src="/imagenes/logo_boe.png"  alt="Agencia Estatal Bolet&#xED;n Oficial del Estado">
+        </a>
+      </span>
+    </div> <!-- #cabecera -->
+    <!-- Cuerpo -->
+    <div id="cuerpo">
+      <div id="top" class="banda-menu">
+        <div id="menu_principal" class="menu-wrapper">
+          <ul>
+            <li class="inicio pc tablet">
+              <a href="https://subastas.boe.es/index.php"><span>Inicio</span></a>
+            </li>
+            <li class="buscar">
+              <a href="https://subastas.boe.es/subastas_ava.php">
+                <span class="pc tablet">Buscar</span>
+                <span class="movil"><img alt="Buscar" src="/imagenes/logoBuscar_blanco.png" srcset="/imagenes/logoBuscar_blanco.svg"></span>
+              </a>
+            </li>
+            <li class="ayuda">
+              <a href="https://subastas.boe.es/ayuda.php">
+                <span class="pc tablet">Ayuda</span>
+                <span class="movil"><img alt="Ayuda" src="/imagenes/ayuda.png" srcset="/imagenes/ayuda.svg"></span>
+              </a>
+            </li>
+            <li  class="botonAcceso ico_acceso">
+              <a href="https://subastas.boe.es/acceso.php">
+                <span class="tablet pc">
+                  Iniciar sesi&#xF3;n<span class="luz">Pulse para acceder o registrarse como usuario en el Portal de Subastas</span>
+                </span>
+                <span class="movil"><img alt="Iniciar sesi&#xF3;n" src="/imagenes/logoAcceso.png" srcset="/imagenes/logoAcceso.svg"></span>
+              </a>
+            </li> 
+          </ul>
+        </div><!-- #menu_principal -->
+      </div><!-- .banda-menu -->
+      <p class="disclaimer">
+        <span id="fechaOficial">Jueves, 09 de abril de 2026</span>
+        <span id="horaOficial">00:09:11</span>
+        <span id="usoHorario" title="Hora Central Europea / Central European Time">CET</span>
+      </p>
+      <script>
+         var hoy = new Date(2026,4-1,9,00,09,11); 
+         function reloj(){
+            var hora = hoy.getHours(); 
+            var minutos = hoy.getMinutes(); 
+            var segundos = hoy.getSeconds(); 
+            if (hora<=9) hora = "0" + hora; 
+            if (minutos<=9) minutos = "0" + minutos; 
+            if (segundos<=9) segundos = "0" + segundos; 
+            var horaFinal = hora + ":" + minutos + ":" + segundos; 
+            var dia = new Array('Domingo','Lunes','Martes','Mi&#xe9;rcoles','Jueves','Viernes','S&#xe1;bado'); 
+            var mes = new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'); 
+            var anio = hoy.getFullYear(); 
+            var fecha = dia[hoy.getDay()] + ', ' + hoy.getDate() + ' de '  + mes[hoy.getMonth()] + ' de ' + anio ; 
+
+            document.getElementById('fechaOficial').innerHTML = fecha;
+            document.getElementById('horaOficial').innerHTML = horaFinal;
+
+            hoy.setSeconds(hoy.getSeconds() +1);
+            setTimeout('reloj()',1000);
+         } 
+         reloj();
+      </script>
+      <div id="contenedor">
+        <div id="contenido">
+          <h2>Subastas. Búsqueda avanzada</h2>
+          <div>
+            <ul class="navlist">
+              <li class="label"><a href="./subastas_ava.php?accion=&amp;id_busqueda=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,-0-50" >B&#xFA;squeda</a></li>
+              <li class="label"><a href="./subastas_ava.php?accion=Mas&amp;id_busqueda=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,-0-50" class="current">Resultados</a></li>
+              <li class="label"><a href="./subastas_ava.php?accion=Fav&amp;id_busqueda=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,-0-50" class="guardar">Guardar<span class="pc tablet"> b&#xFA;squeda</span><img src="/imagenes/logoMiBOE_azul.png" srcset="/imagenes/logoMiBOE_azul.svg" alt="Sesi&#xF3;n activa"/></a></li>
+            </ul>
+          </div>
+          <div class="paginar">
+            <p>Resultados 1 a 43 de 43</p>
+          </div>
+          <div class="paginar2">
+            <ul/>
+          </div>
+          <div class="listadoResult">
+            <ul>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-257418</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0468/22</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 27/04/2026 a las 18:00:00]</p>
+                <p>Descripción: Una casa habitación, para derribo, sita en TERRATEIG, en la calle Jose 
+          Antonio Número tres, de superficie ciento treinta y ocho metros cuadrados. Linda: por la 
+          derecha entrando, Juan Prats Moreno; izquierda, Camilo Margarita Todolí y fondo, Cipriano 
+          Catalá Ferrer. </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-257418&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-257418"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-257418&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-257418">Más... (Referencia SUB-JA-2026-257418)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-258849</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0536/22</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 27/04/2026 a las 18:00:00]</p>
+                <p>Vivienda sita en Puerto de Sagunto,  C/ América número 21 (antes 24) vivienda puerta 4ª en planta 2ª </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258849&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-258849"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258849&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-258849">Más... (Referencia SUB-JA-2026-258849)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JV-2026-259800</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0504/25</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 22/04/2026 a las 18:00:00]</p>
+                <p>VEHICULO PEUGEOT MODEL N308 PALLURE THP  </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JV-2026-259800&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JV-2026-259800"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JV-2026-259800&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JV-2026-259800">Más... (Referencia SUB-JV-2026-259800)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JV-2026-259825</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 1339/25</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 22/04/2026 a las 18:00:00]</p>
+                <p>VEHICULO MARCA CITROEN C3  </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JV-2026-259825&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JV-2026-259825"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JV-2026-259825&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JV-2026-259825">Más... (Referencia SUB-JV-2026-259825)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JV-2026-259833</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 2072/24</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 22/04/2026 a las 18:00:00]</p>
+                <p>VEHÍCULO MAZDA MODELO 3 </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JV-2026-259833&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JV-2026-259833"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JV-2026-259833&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JV-2026-259833">Más... (Referencia SUB-JV-2026-259833)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-AT-2026-26R4686001035</h3>
+                <h4>U.R. SUBASTAS VALENCIA - VALENCIA (AEAT)</h4>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>SOLAR. CL NOU ACCES A LA MAR S/N DAIMUS VALENCIA </p>
+                <a href="./detalleSubasta.php?idSub=SUB-AT-2026-26R4686001035&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-AT-2026-26R4686001035"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-AT-2026-26R4686001035&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-AT-2026-26R4686001035">Más... (Referencia SUB-AT-2026-26R4686001035)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-AT-2026-26R4686001049</h3>
+                <h4>U.R. SUBASTAS VALENCIA - VALENCIA (AEAT)</h4>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>50% DEL PLENO DOMINIO, VIVIENDA. CL LA CREU 15 GILET VALENCIA </p>
+                <a href="./detalleSubasta.php?idSub=SUB-AT-2026-26R4686001049&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-AT-2026-26R4686001049"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-AT-2026-26R4686001049&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-AT-2026-26R4686001049">Más... (Referencia SUB-AT-2026-26R4686001049)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-AT-2026-26R4686002003</h3>
+                <h4>U.R. SUBASTAS VALENCIA - VALENCIA (AEAT)</h4>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>TURISMO NACIONAL/IMPORTAC 4612MRD  HYUNDAI  TUCSON </p>
+                <a href="./detalleSubasta.php?idSub=SUB-AT-2026-26R4686002003&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-AT-2026-26R4686002003"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-AT-2026-26R4686002003&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-AT-2026-26R4686002003">Más... (Referencia SUB-AT-2026-26R4686002003)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2025-242246</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0012/22</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>URBANA: VIVIENDA sita en PUERTO DE SAGUNTO, calle Toledo, número 6, planta 2, puerta 7. Tiene una superficie de 101,35 m2. </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2025-242246&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2025-242246"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2025-242246&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2025-242246">Más... (Referencia SUB-JA-2025-242246)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2025-256202</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 1293/23</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>URBANA NÚMERO UNO. VIVIENDA señalada su puerta con el número UNO, recayente
+          en la planta baja, del edificio sito en Paterna, calle San Salvador, número
+          35. </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2025-256202&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2025-256202"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2025-256202&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2025-256202">Más... (Referencia SUB-JA-2025-256202)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-256559 (2 lotes)</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0720/20</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>Subasta con varios lotes. Lote 1: NÚMERO CINCO. Planta baja destinada a local comercial. Mide una superficie de ciento veintiocho metros y cuarenta y tres decímetros cuadrados.  Lote 2: URBANA: NÚMERO TRES. Vivienda del tipo B, en la planta alta segunda, puerta tercera. Mide una superficie de ciento dieciséis metros y cuarenta y tres decímetros cuadrados. Consta de vestíbulo, comedor, tres habitaciones, estar, cocina, baño y aseo.  </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-256559&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-256559"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-256559&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-256559">Más... (Referencia SUB-JA-2026-256559)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-257478 (2 lotes)</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0479/20</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>Subasta con varios lotes. Lote 1: FINCA REGISTRAL Nº  49.852 VIVIENDA SITA CL BARRAQUES 77 Bl:A Es:A Pl:02 Pt:03 46730 GANDIA (VALENCIA) Lote 2: FINCA REGISTRAL Nº 52.839. VIVIENDA SITA EN CL LEGAZPI 4 Es:1 Pl:00 Pt:01 46730 GANDIA (VALENCIA) </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-257478&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-257478"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-257478&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-257478">Más... (Referencia SUB-JA-2026-257478)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-258138</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 2282/23</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>Edificio en Valencia, calle de Borrull, número 10.- LOCAL NÚMERO SIETE DE ORDEN.- VIVIENDA EN TERCERA PLANTA ALTA, izquierda mirando a la fachada del edificio, demarcada su puerta de acceso en la escalera con el NÚMERO CINCO, compuesta de diversas dependencias propias para habitar; tiene una superficie de sesenta y tres metros cuadrados. </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258138&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-258138"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258138&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-258138">Más... (Referencia SUB-JA-2026-258138)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-258916 (8 lotes)</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0474/16</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>Subasta con varios lotes. Lote 1: VIVIENDA DUPLEX EN PLANTAS BAJA Y PRIMERA , CON
+          ENTRADA POR LA PLANTA BAJA, IDENTIFICADA SU PUERTA EN LA
+          ESCALERA CON EL NUMERO UNO, sita en olleria Tipo AO.
+          Se halla vinculada a esta vivienda como anejo
+          inseparable de la misma: 
+          - La plaza de aparcamiento ubicada en la planta sótano
+          identificada con el numero uno.
+          - El trastero ubicado en planta baja, identificado con
+          la letra A. Lote 2: -VIVIENDA DUPLEX EN PLANTAS BAJA Y PRIMERA , CON
+          ENTRADA POR LA PLANTA BAJA, IDENTIFICADA SU PUERTA EN LA
+          ESCALERA CON EL NUMERO CUATRO , sita en olleria Tipo DO.
+          Se halla vinculada a esta vivienda como anejo
+          inseparable de la misma: 
+          - La plaza de aparcamiento ubicada en la planta sótano
+          identificada con el numero cuatro.
+          - El trastero ubicado en planta baja , identificado con
+          la letra D. Lote 3: VIVIENDA DUPLEX EN PLANTAS ALTAS SEGUNDA Y
+          TERCERA , CON ENTRADA POR LA PLANTA SEGUNDA, IDENTIFICADA SU
+          PUERTA EN LA ESCALERA CON EL NUMERO DIEZ, sita en olleria
+          Tipo J2.
+          Se halla vinculada a esta vivienda como anejo
+          inseparable de la misma: 
+          - La plaza de aparcamiento ubicada en la planta sótano
+          identificada con el numero diez.  El trastero ubicado en planta baja , identificado con
+          la letra J.
+           Lote 4: VIVIENDA EN PLANTA ALTA TERCERA , IDENTIFICADA SU
+          PERTA EN LA ESCALERA CON EL NUMERO DIECISEIS, sita en Olleria
+          Tipo H3.
+          Se halla vinculada a esta vivienda como anejo
+          inseparable de la misma: 
+          - La plaza de aparcamiento ubicada en la planta sótano
+          identificada con el numero dieciseis.
+           Lote 5: VIVIENDA DUPLEX EN PLANTAS ALTAS CUARTA Y QUINTA ,
+          CON ENTRADA POR LA PLANTA CUARTA , IDENTIFICADA SU PUERTA EN
+          LA ESCALERA CON EL NUMERO DIECIOCHO, sita en olleria Tipo 14.
+          Se halla vinculada a esta vivienda como anejo
+          inseparable de la misma: 
+          - La plaza de aparcamiento ubicada en la planta sótano
+          identificada con el numero dieciocho.
+          - El trastero ubicado en planta baja , identificado con
+          la letra I. Lote 6: VIVIENDA DUPLEX EN PLANTAS ALTAS CUARTA Y QUINTA,
+          CON ENTRADA POR LA PLANTA CUARTA, IDENTIFICADA SU PUERTA EN LA
+          ESCALERA CON EL NUMERO VEINTE, sita en olleria Tipo K4. Se halla vinculada a esta vivienda como anejo
+          inseparable de la misma: 
+          - La plaza de aparcamiento ubicada en la planta sótano
+          identificada con el numero veinte.
+          - El trastero ubicado en planta segunda , identificado
+          con la letra K.  Lote 7: VIVIENDA DUPLEX EN PLANTAS ALTAS CUARTA Y QUINTA , ,
+          CON ENTRADA POR LA PLANTA CUARTA, IDENTIFICADA SU PUERTA EN LA
+          ESCALERA CON EL NUMERO VEINTIUNO ., sita en olleria Tipo L4.
+          Se halla vinculada a esta vivienda como anejo
+          inseparable de la misma: 
+          - La plaza de aparcamiento ubicada en la planta sótano
+          identificada con el numero veintiuno.
+          - El trastero ubicado en planta segunda, identificado
+          con la letra L.
+           Lote 8: VIVIENDA DUPLEX EN PLANTAS ALTAS CUARTA Y QUINTA ,
+          CON ENTRADA POR LA PLANTA CUARTA , IDENTIFICADA SU PUERTA EN
+          LA ESCALERA CON EL NUMERO VEINTIDOS , sita en olleria Tipo
+          M4.
+          Se halla vinculada a esta vivienda como anejo
+          inseparable de la misma: 
+          - La plaza de aparcamiento ubicada en la planta sótano
+          identificada con el numero veintidos.
+          - El trastero ubicado en planta baja , identificado con
+          la letra M.
+           </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258916&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-258916"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258916&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-258916">Más... (Referencia SUB-JA-2026-258916)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-259191</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 1194/20</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>URBANA; Casa situada en Oliva, Calle Nazareno, número sesenta. Se asienta sobre un solar de ciento cinco metros cuadrados. Esta compuesta de tres plantas, que en conjunto ocupan una superficie de doscientos noventa y cinco metros cuadrados. La planta baja y planta primera , ocupan, cada una, una superficie de ciento cinco metros cuadrados, destinados a vivienda, y la planta segunda ocupa una superficie de ochenta y cinco metros cuadrados destinados a vivienda. Linda: frente, con calle de su situación; derecha entrando, con casa de Isabel Verdú Jorge; izquierda, con la de Consuelo Bertomeu Sempere; y dorso, con casas de Vicente Parra Malonda y Francisco José Pericás Malonda. </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259191&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-259191"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259191&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-259191">Más... (Referencia SUB-JA-2026-259191)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-259436</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 1378/22</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>URBANA: NUMERO CINCO. Vivienda de la primera planta alta tipo C), puerta 3ª, sita en Xeraco, calle Ronda, sin número y Travesía calle Gandía, con la que forma esquina, con fachada recayente a la calle Travesía calle Gandía. Tiene su acceso por medio de escalera y ascensor, comprende una superficie construida de ciento veintiún metros seis decímetros cuadrados, útiles ochenta y nueve metros noventa y nueve decímetros cuadrados. Distribuida en las dependencias propias de una vivienda moderna. Linda mirando desde la calle Ronda, por frente, vivienda tipo B, de la misma planta, puerta 2ª, y pasillo de la escalera; derecha, vivienda tipo A, de la misma planta puerta 1ª, y pasillo de la escalera; izquierda, travesía calle Gandía; y fondo, solar de Xepla, S.A. Esta vivienda tiene acceso y derecho a utilizar la parte del patio de luces central del edificio que colinda con la misma, y la parte del patio de luces del fondo del edificio que colinda con la misma. Cuota:
+          Cinco coma ochenta y ocho enteros por ciento. </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259436&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-259436"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259436&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-259436">Más... (Referencia SUB-JA-2026-259436)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-259438 (2 lotes)</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0011/22</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>Subasta con varios lotes. Lote 1: URBANA: DOCE.- Vivienda en la quinta planta alta, puerta diez, situada en Catarroja, calle del Ateneo Mercantil veintisiete; con
+          distribución propia para habitar. Ocupa una superficie de setenta y tres, coma, ochenta y cinco metros cuadrados. Linda: por la derecha entrando en el edificio, solar de Vicente Perelló Raga; izquierda, el apartamiento once y el rellano y hueco de la escalera; y espaldas, de Llorimar, S.A .. CUOTA: ocho coma cuarenta enteros por ciento.  Lote 2: URBANA: VIVIENDA del piso primero, puerta número UNO. Le corresponde una cuota de participación de nueve enteros por ciento.  Forma parte del edificio en Valencia, calle de Salvador Lluch número veinticuatro de policía. Con una superficie
+          el total edificio de quinientos treinta y nueve metros y cincuenta y cinco decímetros cuadrados. El cual se compone
+          de dos plantas bajas con patio en el centro y portería desde donde arranca una escalera que conduce a cinco pisos
+          altos con dos habitaciones encaradas en cada uno de ellos y al terrado y habitaciones para la portera y linda: por
+          frente, en una línea de quince metros con calle de Salvador Lluch; por fondo, Juan Aleixandre y otros; por la
+          derecha entrando Juan Vázquez Moret; y por la izquierda, Amparo Pardo Nácher y Manuel Nácher Caplliure.  Las
+          plantas bajas de dicho edificio, tendrán derecho al disfrute de los deslunados que recaen sobre las mismas, siendo
+          los gastos que se originen para el disfrute de dicha servidumbre, de cuenta del propietario que sea de dichas plantas bajas.  </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259438&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-259438"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259438&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-259438">Más... (Referencia SUB-JA-2026-259438)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-259701</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0018/24</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>REGISTRO DE LA PROPIEDAD NÚMERO QUINCE DEL DISTRITO
+          HIPOTECARIO DE VALENCIA. Finca 9125 de la sección 9ª de Valencia: Que la
+          descripción tomada de su inscripción 1ª, al folio electrónico, de la Sección 9ª
+          del municipio de Valencia es como sigue: URBANA.- DIECISIETE. Piso cuarto
+          centro izquierda, situado en la planta cuarta de la casa en Valencia, avenida
+          del Cid, número cincuenta y uno. Ocupa una superficie construida de unos
+          novena y seis metros treinta y ocho decímetros cuadrados. Esta vivienda se
+          encuentra compartimentada en las siguientes estancias: vestíbulo, comedorestar,
+          tres dormitorios, cocina y cuarto de aseo. Linda: izquierda entrando,
+          con vivienda izquierda de la misma planta, separada por pared medianera;
+          derecha, con los mismos límites que la fachada principal de la casa; fondo,
+          con los mismos límites que la fachada lateral derecha de la casa; frente, con
+          caja de escalera. Cuota: 3,65 por ciento. Es finca en régimen de propiedad
+          horizontal de la número 44.817 </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259701&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-259701"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259701&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-259701">Más... (Referencia SUB-JA-2026-259701)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JV-2026-259375</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0077/24</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>MATRICULA: 1843 DYG MARCA: BMW
+          MODELO: 318 BASTIDOR: WBABX91070PN78074 </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JV-2026-259375&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JV-2026-259375"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JV-2026-259375&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JV-2026-259375">Más... (Referencia SUB-JV-2026-259375)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JV-2026-259714</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 2085/22</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 20/04/2026 a las 18:00:00]</p>
+                <p>VEHÍCULO: MARCA : SEAT- MODELO: LEON 2.0 - MATRÍCULA:
+          1602 -DLV- CON NÚM. BASTIDOR:VSSZZZ1PZ6R001194 </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JV-2026-259714&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JV-2026-259714"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JV-2026-259714&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JV-2026-259714">Más... (Referencia SUB-JV-2026-259714)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-259102</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 1762/24</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 15/04/2026 a las 18:00:00]</p>
+                <p>Una casa situada en BARX, calle FONT; número ocho; con 
+          adecuada distribución interior; compuesta de planta baja y tres 
+          plantas altas; ocupa una de las plantas baja, primera y segunda una 
+          superficie construida de cincuenta y cuatro metros cuadrados, y la 
+          planta tercera, nueve metros cuadrados. Lindante: por frente, calle de 
+          su situación; derecha entrando, de Remedios Chaveli; izquierda, de 
+          Juan Bautista Montagud Pons; y fondo, de Remedios Chaveli. de las 
+          plantas baja, primera y segunda una superficie construida de 
+          cincuenta y cuatro metros cuadrados, y la planta tercera, nueve metros 
+          cuadrados. Lindante: por frente, Calle de su situación; derecha 
+          entrando, de Remedios Chaveli; izquierda, de Juan Bautista Montagud 
+          Pons; y fondo, de Remedios Chaveli. REFERENCIA CATASTRAL: 
+          3720104YJ3232S0001WW </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259102&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-259102"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259102&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-259102">Más... (Referencia SUB-JA-2026-259102)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-259330</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0377/17</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 15/04/2026 a las 18:00:00]</p>
+                <p>URBANA.- Casa situada en Algemesí en la Calle San Benet
+          nº 67. Tiene una superficie de CIENTO SESENTA Y SIETE METROS
+          CUADRADOS. </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259330&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-259330"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259330&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-259330">Más... (Referencia SUB-JA-2026-259330)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-259427</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0720/24</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 15/04/2026 a las 18:00:00]</p>
+                <p>URBANA. Casa de habitación y morada, compuesta de planta baja y piso alto sita en la villa de Buñol, frente a la calle de José María Pereda número once </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259427&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-259427"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259427&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-259427">Más... (Referencia SUB-JA-2026-259427)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JV-2026-259555 (2 lotes)</h3>
+                <h4>SERVICIO COMUN GENERAL DE ARCHIVO TERRITORIAL - RIBARROJA TURIA </h4>
+                <p>Expediente: 0011/26</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 15/04/2026 a las 18:00:00]</p>
+                <p>Subasta con varios lotes. Lote 1: LOTE 1 DESCRITO EN EL EDICTO DE SUBASTA Lote 2: LOTE 2 DESCRITO EN EL EDICTO DE SUBASTA </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JV-2026-259555&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JV-2026-259555"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JV-2026-259555&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JV-2026-259555">Más... (Referencia SUB-JV-2026-259555)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-AT-2026-25R4686001530</h3>
+                <h4>U.R. SUBASTAS VALENCIA - VALENCIA (AEAT)</h4>
+                <p>Estado: Celebrándose - [Conclusión prevista: 13/04/2026 a las 18:00:00]</p>
+                <p>LOCAL COMERCIAL. CL/ CID, 73 1 1. 46600 - ALZIRA (VALENCIA) </p>
+                <a href="./detalleSubasta.php?idSub=SUB-AT-2026-25R4686001530&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-AT-2026-25R4686001530"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-AT-2026-25R4686001530&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-AT-2026-25R4686001530">Más... (Referencia SUB-AT-2026-25R4686001530)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-AT-2026-25R4686001592</h3>
+                <h4>U.R. SUBASTAS VALENCIA - VALENCIA (AEAT)</h4>
+                <p>Estado: Celebrándose - [Conclusión prevista: 13/04/2026 a las 18:00:00]</p>
+                <p>LOCAL COMERCIAL. CL/ MENENDEZ PELAYO, 6 00. 46960 - ALDAIA (VALENCIA) </p>
+                <a href="./detalleSubasta.php?idSub=SUB-AT-2026-25R4686001592&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-AT-2026-25R4686001592"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-AT-2026-25R4686001592&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-AT-2026-25R4686001592">Más... (Referencia SUB-AT-2026-25R4686001592)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-AT-2026-26R4686001046</h3>
+                <h4>U.R. SUBASTAS VALENCIA - VALENCIA (AEAT)</h4>
+                <p>Estado: Celebrándose - [Conclusión prevista: 13/04/2026 a las 18:00:00]</p>
+                <p>VIVIENDA. AV/ CAMÍ DE XÁTIVA, 46. 46716 - RAFELCOFER (VALENCIA) </p>
+                <a href="./detalleSubasta.php?idSub=SUB-AT-2026-26R4686001046&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-AT-2026-26R4686001046"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-AT-2026-26R4686001046&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-AT-2026-26R4686001046">Más... (Referencia SUB-AT-2026-26R4686001046)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-AT-2026-26R4686002001</h3>
+                <h4>U.R. SUBASTAS VALENCIA - VALENCIA (AEAT)</h4>
+                <p>Estado: Celebrándose - [Conclusión prevista: 13/04/2026 a las 18:00:00]</p>
+                <p>OTROS BIEN/DCHO CONCESIÓN AD. EXPENDEDURIA TABACO Y TIMBRE </p>
+                <a href="./detalleSubasta.php?idSub=SUB-AT-2026-26R4686002001&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-AT-2026-26R4686002001"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-AT-2026-26R4686002001&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-AT-2026-26R4686002001">Más... (Referencia SUB-AT-2026-26R4686002001)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2025-254603 (46 lotes)</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0671/18</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 13/04/2026 a las 18:00:00]</p>
+                <p>Subasta con varios lotes. Lote 1: FINCA REGISTRAL. 12.319. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta baja, puerta 1. Lote 2: FINCA REGISTRAL Nº 12.320. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta baja, puerta 2. Lote 3: FINCA REGISTRAL Nº 12.321. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta baja, puerta 3. Lote 4: FINCA REGISTRAL Nº 12.322. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta baja, puerta 4. Lote 5: FINCA REGISTRAL Nº 12.323. Vivienda situada en Olleria, calle Engo Barber nº 2, planta primera, puerta 5. Lote 6: FINCA REGISTRAL 12.324 Vivienda situada en Olleria, calle Engo Barber nº 2, planta primera, puerta 6. Lote 7: FINCA REGISTRAL Nº 12.325. Vivienda situada en Olleria, calle Engo Barber nº 2, planta primera, puerta 7. Lote 8: FINCA REGISTRAL 12.326. Vivienda situada en Olleria, calle Engo Barber nº 2, planta primera, puerta 8 Lote 9: FINCA REGISTRAL Nº 12.327. Vivienda situada en Olleria, calle Engo Barber nº 2, planta primera, puerta 9. Lote 10: FINCA REGISTRAL Nº 12.328. Vivienda situada en Olleria, calle Engo Barber nº 2, planta primera, puerta 10. Lote 11: FINCA REGISTRAL Nº 12.329. Vivienda situada en Olleria, calle Engo Barber nº 2, planta primera, puerta 11. Lote 12: FINCA REGISTRAL Nº 12.330. Vivienda situada en Olleria, calle Engo Barber nº 2, planta segunda, puerta 14. Lote 13: FINCA REGISTRAL Nº 12.331. Vivienda situada en Olleria, calle Engo Barber nº 2, planta segunda, puerta 15 Lote 14: FINCA REGISTRAL Nº 12.332. Vivienda situada en Olleria, calle Engo Barber nº 2, planta segunda, puerta 16. Lote 15: FINCA REGISTRAL Nº 12.333. Vivienda situada en Olleria, calle Engo Barber nº 2, planta segunda, puerta 17. Lote 16: FINCA REGISTRAL Nº 12.334. Vivienda situada en Olleria, calle Engo Barber nº 2, planta segunda, puerta 18. Lote 17: FINCA REGISTRAL Nº 12.335. Vivienda sita en Ollería, calle Engo Barber, nº 2, planta 2ª, puerta 19. Lote 18: FINCA REGISTRAL Nº 12.336. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta segunda, puerta 20. Lote 19: FINCA REGISTRAL Nº 12.337. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta tercera, puerta 23. Lote 20: FINCA REGISTRAL Nº 12.338. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta tercera, puerta 24. Lote 21: FINCA REGISTRAL Nº 12.339. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta tercera, puerta 25. Lote 22: FINCA REGISTRAL Nº 12.340. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta tercera, puerta 26. Lote 23: FINCA REGISTRAL Nº 12.341.  URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta tercera, puerta 27. Lote 24: FINCA REGISTRAL Nº 12.342. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta tercera, puerta 28. Lote 25: FINCA REGISTRAL Nº 12.343. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta tercera, puerta 29. Lote 26: FINCA REGISTRAL Nº 12.344. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta cuarta, puerta 32. Lote 27: FINCA REGISTRAL Nº 12.345. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta cuarta, puerta 33. Lote 28: FINCA REGISTRAL Nº 12.346. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta cuarta, puerta 34. Lote 29: FINCA REGISTRAL Nº 12.347. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta cuarta, puerta 35. Lote 30: FINCA REGISTRAL Nº 12.348. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta cuarta, puerta 36. Lote 31: FINCA REGISTRAL Nº 12.349. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta cuarta, puerta 37. Lote 32: FINCA REGISTRAL Nº 12.350. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta cuarta, puerta 38. Lote 33: FINCA REGISTRAL Nº 12.353. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta quinta, puerta 43. Lote 34: FINCA REGISTRAL Nº 12.355. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta quinta, puerta 45. Lote 35: FINCA REGISTRAL Nº 12.357. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta quinta, puerta 47. Lote 36: FINCA REGISTRAL Nº 12.358. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta sexta, puerta 48. Lote 37: FINCA REGISTRAL Nº 12.359.  URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta sexta, puerta 49. Lote 38: FINCA REGISTRAL Nº 12.362. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta sexta, puerta 52. Lote 39: FINCA REGISTRAL Nº 12.701. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta primera, puerta 12. Lote 40: FINCA REGISTRAL Nº 12.702. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta primera, puerta 13. Lote 41: FINCA REGISTRAL Nº 12.703. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta segunda, puerta 21. Lote 42: FINCA REGISTRAL Nº 12.704. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta segunda, puerta 22. Lote 43: FINCA REGISTRAL Nº 12.705. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta tercera, puerta 30. Lote 44: FINCA REGISTRAL Nº 12.706. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta tercera, puerta 31. Lote 45: FINCA REGISTRAL Nº 12.707. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta cuarta, puerta 39. Lote 46: FINCA REGISTRAL Nº 12.708. URBANA, vivienda situada en Olleria, calle Engo Barber nº 2, planta cuarta, puerta 40. </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2025-254603&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2025-254603"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2025-254603&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2025-254603">Más... (Referencia SUB-JA-2025-254603)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2025-255524</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 1524/20</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 13/04/2026 a las 18:00:00]</p>
+                <p>URBANA: NUMERO SEIS.- Vivienda señalada su puerta con el número DOS, recayente en el piso primero, del edificio sito en
+          Benimámet-Valencia, calle Esperanza, número uno. Linda: Mirando su fachada principal, frente, vivienda puerta número tres y deslunado; derecha mirando dicha fachada, pasillo de acceso y hueco del ascensor; izquierda, calle Carpinteros y chaflán a la calle Esperanza; y fondo, casa de Doña Francisca López Bort. Tiene una superficie construida de ciento cuatro
+          metros, once decímetros cuadrados. Es del tipo A. Cuota: cinco enteros por ciento. Tiene concedida la Calificación Definitiva de Viviendas de Protección Oficial Subvencionada, expediente V-VS-431/71 de 31/05/74.
+           </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2025-255524&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2025-255524"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2025-255524&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2025-255524">Más... (Referencia SUB-JA-2025-255524)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-258153</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0553/21</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 13/04/2026 a las 18:00:00]</p>
+                <p>URBANA. VIVIENDA UNIFAMILIAR terminada sita en Sagunto, calle Muralla número siete. En la planta baja se sitúa el salón-comedor, cocina, vestíbulo y aseo; en la planta primera, tres
+          dormitorios y un baño, y en planta buhardilla, sin distribución. Superficies: planta baja cincuenta y nueve metros treinta y cuatro decímetros cuadrados; planta primera, cincuenta y cinco metros un decímetros cuadrados y planta buhardilla, cuarenta metros ochenta y tres decímetros cuadrados.
+           </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258153&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-258153"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258153&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-258153">Más... (Referencia SUB-JA-2026-258153)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-258518</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 1452/24</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 13/04/2026 a las 18:00:00]</p>
+                <p>lanta baja de la izquierda mirando a la fachada,
+          destinada a fines industriales , con los servicios inherentes;
+          ocupa una superficie aproximada de veintiocho metros cincuenta
+          decímetros cuadrados. Lindante: por la derecha entrando, con el
+          patio de entrada y local de portería;
+          izquierda , Juan Ferrero; y espaldas , el Colegio de las
+          Escuelas Pías. Tiene asignado un porcentaje en los elementos
+          comunes de once enteros por ciento. Forma parte de la casa sita
+          en Valencia, calle de SANTA TERESA, número TRES
+          VALOR DEL BIEN A EFECTOS DE SUBASTA: 87.661,47 EUROS
+          DEPOSITO PARA PARTICIPAR EN SUBASTA:4383,07 EUROS
+          FINCA REGISTRAL Inscrita en el Registro de la Propiedad nº 3
+          de Valencia inscrita en el Tomo 2063, libro 261 folio 154 ,
+          finca </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258518&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-258518"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258518&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-258518">Más... (Referencia SUB-JA-2026-258518)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-258944</h3>
+                <h4>Sección Civil TI Torrent. Plz. n 6 - TORRENT </h4>
+                <p>Expediente: 0197/22</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 13/04/2026 a las 18:00:00]</p>
+                <p>URBANA: VEINTICINCO. - VIVIENDA en sexta planta alta, distribuida para habitar, puerta veinticuatro, tipo O, que forma parte del Edificio situado en Torrent, calle de San Valeriano número doce. puerta 24. Con Calificación Definitiva de Vivienda de Protección Oficial Grupo I, según expediente VI- 788/77, de fecha diecinueve de julio de mil novecientos setenta y nueve </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258944&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-258944"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258944&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-258944">Más... (Referencia SUB-JA-2026-258944)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-259058</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0544/20</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 13/04/2026 a las 18:00:00]</p>
+                <p>Planta alta tercera, 
+          destinada a vivienda, del edificio radicado en
+          Cullera, calle Marina 38 (con Nº de polícia 28).
+          Puerta de entrada señalada como séptima. Mide 91
+          metros, setenta y cuatro decímetros cuadros. Consta de
+          vestíbulo, comedor, concina, dos aseos, cuatro
+          dormitorios y tendedero. </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259058&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-259058"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259058&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-259058">Más... (Referencia SUB-JA-2026-259058)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-259088</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0307/20</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 13/04/2026 a las 18:00:00]</p>
+                <p>Urbana, Vivienda en cuarta planta, puerta 34 de Calle Cataluña Nº 30 de Sagunto (CP 46520), con una superficie construida de 123,18 metros cuadrados.  </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259088&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-259088"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259088&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-259088">Más... (Referencia SUB-JA-2026-259088)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-259127 (38 lotes)</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0733/19</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 13/04/2026 a las 18:00:00]</p>
+                <p>Subasta con varios lotes. Lote 1: Finca firmada por la PLAZA DE GARAJE NÚMERO UNO y el 
+          TRASTERO NÚMERO 1 cerrado, en la planta de semisótano del edificio en construcción sito 
+          en el Puerto de Sagunto, en la partida UA 23, con fachada a la calle Río Guadalquivir, sin 
+          número. La plaza de garaje tiene una superficie útil de 10,35 metros cuadrados, y construida 
+          de 11,89 metros cuadrados. Y el trastero ocupa una superficie útil de 3,15 metros cuadrados 
+          y construida de 4,69 metros cuadrados. Linda todo tomando como frente su acceso: 
+          derecha entrando, finca formada por la plaza de garaje número 2 y el trastero número 2; 
+          izquierda muro de la edificación que da a finca colindante; y fondo, muero que da a la calle 
+          Río Guadalquivir. CUOTA DE PARTIPACIÓN: 0,74%. CUOTA DE PARTICIPACIÓN EN LA 
+          SUBCOMUNIDAD DE GARAJE: 5,47% Lote 2:  Finca 72.469 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 6. 
+           
+          DESCRIPCIÓN.- URBANA NÚMERO DOS. Finca firmada por la PLAZA DE GARAJE NÚMERO DOS y el 
+          TRASTERO NÚMERO 2 cerrado, en la planta de semisótano del edificio en construcción sito En el Puerto de Sagunto, en la partida UA 23, con fachada a la calle Río Guadalquivir, sin 
+          número. La plaza de garaje tiene una superficie útil de 11,09 metros cuadrados, y construida 
+          de 11,32 metros cuadrados. Y el trastero ocupa una superficie útil de 3,15 metros cuadrados 
+          y construida de 4,32 metros cuadrados. Linda todo tomando como frente su acceso: 
+          derecha entrando, finca formada por la plaza de garaje número 3 y el trastero número 3; 
+          izquierda, la finca formada por la plaza de garaje 1 y trastero número 1; y fondo, muero 
+          que da a la calle Río Guadalquivir. CUOTA DE PARTIPACIÓN: 0,70%. CUOTA DE 
+          PARTICIPACIÓN EN LA SUBCOMUNIDAD DE GARAJE: 5,16%.  Lote 3: Finca 72.470 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 9. 
+           
+          DESCRIPCIÓN.- URBANA NÚMERO TRES. Finca firmada por la PLAZA DE GARAJE NÚMERO TRES y el 
+          TRASTERO NÚMERO 3 cerrado, en la planta de semisótano del edificio en construcción sito 
+          en el Puerto de Sagunto, en la partida UA 23, con fachada a la calle Río Guadalquivir, sin 
+          número. La plaza de garaje tiene una superficie útil de 13,40 metros cuadrados, y construida 
+          de 13,73 metros cuadrados. Y el trastero ocupa una superficie útil de 3,15 metros cuadrados 
+          y construida de 4,32 metros cuadrados. Linda todo tomando como frente su acceso: 
+          derecha entrando, finca formada por la plaza de garaje número 4 y el trastero número 4; 
+          izquierda, la finca formada por la plaza de garaje 2 y trastero número 2; y fondo, muero 
+          que da a la calle Río Guadalquivir. CUOTA DE PARTIPACIÓN: 0,81%. CUOTA DE 
+          PARTICIPACIÓN EN LA SUBCOMUNIDAD DE GARAJE: 5,96%. 
+          CRU.- 46046000869928. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0003KI. 
+           
+          DIRECCIÓN CATASTRAL.- CL RIO
+           GUADALQUIVIR 15 Es:G Pl:SM Pt:03 46520 SAGUNTO / 
+          SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. Lote 4: DESCRIPCIÓN.- URBANA NÚMERO CUATRO. Finca firmada por la PLAZA DE GARAJE NÚMERO 
+          CUATRO y el TRASTERO NÚMERO 4 cerrado, en la planta de semisótano del edificio en 
+          construcción sito en el Puerto de Sagunto, en la partida UA 23, con fachada a la calle Río 
+          Guadalquivir, sin número. La plaza de garaje tiene una superficie útil de 11,43 metros 
+          cuadrados, y construida de 11,66 metros cuadrados. Y el trastero ocupa una superficie útil 
+          de 3,15 metros cuadrados y construida de 4,32 metros cuadrados. Linda todo tomando como 
+          frente su acceso: derecha entrando, finca formada por la plaza de garaje número 5 y el 
+          trastero número 5; izquierda, la finca formada por la plaza de garaje 3 y trastero número 3; 
+          y fondo, muero que da a la calle Río Guadalquivir. CUOTA DE PARTIPACIÓN: 0,71%. CUOTA 
+          DE PARTICIPACIÓN EN LA SUBCOMUNIDAD DE GARAJE: 5,27%. 
+          CRU.- 46046000869935. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0004LO. 
+          
+           
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:G  
+          Pl:SM  Pt:04 46520 SAGUNTO / SAGUNT (VALENCIA). Lote 5: Finca 72.472 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 15. 
+           
+          DESCRIPCIÓN.- URBANA NÚMERO CINCO. Finca firmada por la PLAZA DE GARAJE NÚMERO CINCO 
+          y el TRASTERO NÚMERO 5 cerrado, en la planta de semisótano del edificio en construcción 
+          sito en el Puerto de Sagunto, en la partida UA 23, con fachada a la calle Río Guadalquivir, 
+          sin número. La plaza de garaje tiene una superficie útil de 11,43 metros cuadrados, y 
+          construida de 11,66 metros cuadrados. Y el trastero ocupa una superficie útil de 3,15 metros 
+          cuadrados y construida de 4,32 metros cuadrados. Linda todo tomando como frente su 
+          acceso: derecha entrando, finca formada por la plaza de garaje número 6 y el trastero 
+          número 6; izquierda, la finca formada por la plaza de garaje 4 y trastero número 4; y fondo, 
+          muero que da a la calle Río Guadalquivir. CUOTA DE PARTIPACIÓN: 0,71%. CUOTA DE 
+          PARTICIPACIÓN EN LA SUBCOMUNIDAD DE GARAJE: 5,27%. 
+          CRU.- 46046000869942. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0005BP. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:G  
+          Pl:SM  Pt:05 46520 SAGUNTO / SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. Lote 6: Finca 72.473 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 18. 
+           
+          DESCRIPCIÓN.- URBANA NÚMERO SEIS. Finca firmada por la PLAZA DE GARAJE NÚMERO SEIS y el 
+          TRASTERO NÚMERO 6 cerrado, en la planta de semisótano del edificio en construcción 
+          sito en el Puerto de Sagunto, en la partida UA 23, con fachada a la calle Río Guadalquivir, 
+          sin número. La plaza de garaje tiene una 
+          superficie útil de 10,98 metros cuadrados, y construida de 11,22 metros cuadrados. Y el 
+          trastero ocupa una superficie útil de 3,15 metros cuadrados y construida de 4,32 metros 
+          cuadrados. Linda todo tomando como frente su acceso: derecha entrando, finca formada 
+          por la plaza de garaje número 7 y el trastero número 7; izquierda, la finca formada por la 
+          plaza de garaje 5 y trastero número 5; y fondo, muero que da a la calle Río Guadalquivir. 
+          CUOTA DE PARTIPACIÓN: 0,71%. CUOTA DE PARTICIPACIÓN EN LA SUBCOMUNIDAD DE 
+          GARAJE: 5,27%. 
+          CRU.- 46046000869959. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0006ZA. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:G  
+          Pl:SM  Pt:06 46520 SAGUNTO / SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. Lote 7: Finca 72.474 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 21. 
+           
+          DESCRIPCIÓN.- URBANA NÚMERO SIETE. Finca firmada por la PLAZA DE GARAJE NÚMERO SIETE y 
+          el TRASTERO NÚMERO 7 cerrado, en la planta de semisótano del edificio en construcción 
+          sito en el Puerto de Sagunto, en la partida UA 23, con fachada a la calle Río Guadalquivir, 
+          sin número. La plaza de garaje tiene una superficie útil de 10,98 metros cuadrados, y 
+          construida de 11,21 metros cuadrados. Y el trastero ocupa una superficie útil de 3,15 metros 
+          cuadrados y construida de 4,32 metros cuadrados. Linda todo tomando como frente su 
+          acceso: derecha entrando, finca formada por la plaza de garaje número 8 y el trastero número 8; izquierda, la finca formada por la plaza de garaje 6 y trastero número 6; y fondo, 
+          muero que da a la calle Río Guadalquivir. CUOTA DE PARTIPACIÓN: 0,70%. CUOTA DE 
+          PARTICIPACIÓN EN LA SUBCOMUNIDAD DE GARAJE: 5,12%. 
+          CRU- 46046000869966. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0007XS. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:G  
+          Pl:SM  Pt:07 46520 SAGUNTO / SAGUNT (VALENCIA) 
+          SITUACIÓN POSESORÍA.- no consta. 
+           Lote 8: Finca 72.475 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 24. 
+           
+          DESCRIPCIÓN.- URBANA NÚMERO OCHO. Finca firmada por la PLAZA DE GARAJE NÚMERO OCHO 
+          y el TRASTERO NÚMERO 8 cerrado, en la planta de semisótano del edificio en construcción 
+          sito en el Puerto de Sagunto, en la partida UA 23, con fachada a la calle Río Guadalquivir, 
+          sin número. La plaza de garaje tiene una superficie útil de 12,21 metros cuadrados, y 
+          construida de 12,66 metros cuadrados. Y el trastero ocupa una superficie útil de 3,15 metros 
+          cuadrados y construida de 4,32 metros cuadrados. Linda todo tomando como frente su 
+          acceso: derecha entrando, finca formada por la plaza de garaje número 9 y el trastero 
+          número 9; izquierda, la finca formada por la plaza de garaje 7 y trastero número 7; y fondo, 
+          muero que da a la calle Río Guadalquivir. CUOTA DE PARTIPACIÓN: 0,76%. CUOTA DE 
+          PARTICIPACIÓN EN LA SUBCOMUNIDAD DE GARAJE: 5,60%. 
+          CRU.- 46046000869973. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0008MD. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:G  
+          Pl:SM  Pt:08 46520 SAGUNTO / SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta.  Lote 9: Finca 72.476 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 28. 
+           
+          DESCRIPCIÓN.- URBANA NÚMERO NUEVE. Finca firmada por la PLAZA DE GARAJE NÚMERO 
+          NUEVE y el TRASTERO NÚMERO 9 cerrado, en la planta de semisótano del edificio en 
+          construcción sito en el Puerto de Sagunto, en la partida UA 23, con fachada a la calle Río 
+          Guadalquivir, sin número. La plaza de garaje tiene una superficie útil de 13,33 metros 
+          cuadrados, y construida de 13,68 metros cuadrados. Y el trastero ocupa una superficie útil 
+          de 3,73 metros cuadrados y construida de 5,30 metros cuadrados. Linda todo tomando como 
+          frente su acceso: derecha entrando, finca formada por la plaza de garaje número 10 y el 
+          trastero número 10; izquierda, la finca formada por la plaza de garaje 8 y trastero número 8; 
+          y fondo, muero que da a la calle Río Guadalquivir. CUOTA DE PARTIPACIÓN: 0,85%. CUOTA 
+          DE PARTICIPACIÓN EN LA SUBCOMUNIDAD DE GARAJE: 6,26%. 
+          CRU.- 46046000869980. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0009QF. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:G  
+          Pl:SM  Pt:09 46520 SAGUNTO / SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta.  Lote 10: 10. Finca 72.477 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 30. 
+           
+          DESCRIPCIÓN.- URBANA NÚMERO DIEZ. Finca firmada por la PLAZA DE GARAJE NÚMERO DIEZ y 
+          el TRASTERO NÚMERO 10 cerrado, en la planta de semisótano del edificio en construcción sito en el Puerto de Sagunto, en la partida UA 23, con fachada a la calle Río Guadalquivir, 
+          sin número. La plaza de garaje tiene una superficie útil de 12,60 metros cuadrados, y 
+          construida de 13,95 metros cuadrados. Y el trastero ocupa una superficie útil de 3,73 metros 
+          cuadrados y construida de 5,68 metros cuadrados. Linda todo tomando como frente su 
+          acceso: derecha entrando, muro que la separa de finca colindante; izquierda, la finca formada 
+          por la plaza de garaje 9 y trastero número 9; y fondo, muero que da a la calle Río 
+          Guadalquivir. CUOTA DE PARTIPACIÓN: 0,88%. CUOTA DE PARTICIPACIÓN EN LA 
+          SUBCOMUNIDAD DE GARAJE: 6,48%. 
+          CRU.- 46046000869997. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0010XS. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:G  
+          Pl:SM  Pt:10 46520 SAGUNTO / SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta.  Lote 11: Finca 72.478 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 33. 
+           
+          DESCRIPCIÓN.- NÚMERO ONCE: PLAZA DE GARAJE NÚMERO ONCE en la planta 
+          semisótano del edificio en construcción sito en Sagunto Puerto, partida UA nº23, con 
+          fachada a la calle Río Guadalquivir, s/n. La plaza de garaje tiene una superficie útil de 10,37 
+          metros cuadrados, y construida de 12, 50 metros cuadrados. Linda tomando como frente 
+          colindante; izquierda, plaza de garaje número 12; y fondo, muro que la separa de finca 
+          colindante. CUOTA DE PARTICIPACIÓN: 0,56%. CUOTA DE PARTICIPACIÓN EN LA 
+          SUBCOMUNIDAD: 4,13%. 
+          CRU.- 46046000870009. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0011MD. 
+           
+          DIRECCIÓN CATASTRAL.- CL RIO
+           GUADALQUIVIR 15 Es:G Pl:SM Pt:11 46520 SAGUNTO / 
+          SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. Lote 12:  Finca 72.479 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 36. 
+           
+          DESCRIPCIÓN.- NÚMERO DOCE: PLAZA DE GARAJE NÚMERO DOCE en la planta 
+          semisótano del edificio en construcción sito en Sagunto Puerto, partida UA nº23, con 
+          fachada a la calle Río Guadalquivir, s/n. La plaza de garaje tiene una superficie útil de 11,10 
+          metros cuadrados, y construida de 11,90 metros cuadrados. Linda tomando como frente su 
+          acceso: derecha entrando, plaza de garaje número 11; izquierda, plaza de garaje número 13; 
+          y fondo, muro que la separa de finca colindante. CUOTA DE PARTICIPACIÓN: 0,53%. CUOTA 
+          DE PARTICIPACIÓN EN LA SUBCOMUNIDAD: 3,93%. 
+          CRU.- 46046000870016. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0012QF. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:G  
+          Pl:SM  Pt:12 46520 SAGUNTO / SAGUNT (VALENCIA).  Lote 13: semisótano del edificio en construcción sito en Sagunto Puerto, partida UA nº23, con 
+          fachada a la calle Río Guadalquivir, s/n. La plaza de garaje tiene una superficie útil de 11,77 
+          metros cuadrados, y construida de 12,61 metros cuadrados. Linda tomando como frente su 
+          acceso: derecha entrando, plaza de garaje número 12; izquierda, plaza de garaje número 14; 
+          y fondo, muro que la separa de finca colindante. CUOTA DE PARTICIPACIÓN: 057%. CUOTA 
+          DE PARTICIPACIÓN EN LA SUBCOMUNIDAD: 4,16%. 
+          CRU.- 46046000870023. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0013WG. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:G  
+          Pl:SM  Pt:13 46520 SAGUNTO / SAGUNT (VALENCIA).  Lote 14: . Finca 72.481 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 42. 
+           
+          DESCRIPCIÓN.- NÚMERO CATORCE: PLAZA DE GARAJE NÚMERO CATORCE en la planta semisótano 
+          del edificio en construcción sito en Sagunto Puerto, partida UA nº23, con fachada a la calle 
+          Río Guadalquivir, s/n. La plaza de garaje tiene una superficie útil de 11,70 metros cuadrados, 
+          y construida de 12,61 metros cuadrados. Linda tomando como frente su acceso: derecha 
+          entrando, plaza de garaje número 13; izquierda, plaza de garaje número 15; y fondo, muro 
+          que la separa de finca colindante. CUOTA DE PARTICIPACIÓN: 0,57%. CUOTA DE 
+          PARTICIPACIÓN EN LA SUBCOMUNIDAD: 4,16%. 
+          CRU.- 46046000870030. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0014EH. 
+           
+          DIRECCIÓN CATASTRAL.- CL RIO
+           GUADALQUIVIR 15 Es:G Pl:SM Pt:14 46520 SAGUNTO / 
+          SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. Lote 15:  Finca 72.482 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 45. 
+           
+          DESCRIPCIÓN.- NÚMERO QUINCE: PLAZA DE GARAJE NÚMERO QUINCE en la planta 
+          semisótano del edificio en construcción sito en Sagunto Puerto, partida UA nº23, con 
+          fachada a la calle Río Guadalquivir, s/n. La plaza de garaje tiene una superficie útil de 15,76 
+          metros cuadrados, y construida de 17,22 metros cuadrados. Linda tomando como frente su 
+          acceso: derecha entrando, plaza de garaje número 14; izquierda, zaguán y escalera de acceso 
+          a plantas superiores; y fondo, muro que la separa de finca colindante. CUOTA DE 
+          PARTICIPACIÓN: 0,77%. CUOTA DE PARTICIPACIÓN EN LA SUBCOMUNIDAD: 5,68%. 
+          CRU.- 46046000870047. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0015RJ. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:G  
+          Pl:SM  Pt:15 46520 SAGUNTO / SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta.  Lote 16:  Finca 72.483 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 48. 
+           
+          DESCRIPCIÓN.- NÚMERO DIECISÉIS: PLAZA DE GARAJE NÚMERO DIECISÉIS en la planta semisótano 
+          del edificio en construcción sito en Sagunto Puerto, partida UA nº23, con fachada a la calle 
+          Río Guadalquivir, s/n. La plaza de garaje tiene una superficie útil de 12,24 metros cuadrados, y construida de 13,46 metros cuadrados. Linda tomando como frente su acceso: derecha 
+          entrando, zaguán y escalera de acceso a plantas superiores; izquierda, plaza de garaje 
+          número 17; y fondo, muro que la separa de finca colindante. CUOTA DE PARTICIPACIÓN: 
+          0,61%. CUOTA DE PARTICIPACIÓN EN LA SUBCOMUNIDAD: 4,44%. 
+          CRU.- 46046000870054. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0016TK. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:G  
+          Pl:SM  Pt:16 46520 SAGUNTO / SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. Lote 17: Finca 72.484 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 51. 
+           
+          DESCRIPCIÓN.- NÚMERO DIECISIETE: PLAZA DE GARAJE NÚMERO DIECISIETE en la planta 
+          semisótano del edificio en construcción sito en Sagunto Puerto, partida UA nº23, con 
+          fachada a la calle Río Guadalquivir, s/n. La plaza de garaje tiene una superficie útil de 12,24 
+          metros cuadrados, y construida de 13,10 metros cuadrados. Linda tomando como frente su 
+          acceso: derecha entrando, plaza de garaje número 16; izquierda, plaza de garaje número 18; 
+          y fondo, muro que la separa de finca colindante. CUOTA DE PARTICIPACIÓN: 0,59%. CUOTA 
+          DE PARTICIPACIÓN EN LA SUBCOMUNIDAD: 4,33%. 
+          CRU.
+          6046000870061. 
+          REFERENCIA 
+          CATASTRAL.- 
+          DIRECCIÓN 
+          CATASTRAL.- 
+          SITUACIÓN POSESORÍA.- no consta. Lote 18: Finca 72.485 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 54. 
+           
+          DESCRIPCIÓN.- NÚMERO DIECIOCHO: PLAZA DE GARAJE NÚMERO DIECIOCHO en la planta 
+          semisótano del edificio en construcción sito en Sagunto Puerto, partida UA nº23, con 
+          fachada a la calle Río Guadalquivir, s/n. La plaza de garaje tiene una superficie útil de 12,24 
+          metros cuadrados, y construida de 13,10 metros cuadrados. Linda tomando como frente su 
+          acceso: derecha entrando, plaza de garaje número 17; izquierda, plaza de garaje número 19; 
+          y fondo, muro que la separa de finca colindante. CUOTA DE PARTICIPACIÓN: 0,59%. CUOTA 
+          DE PARTICIPACIÓN EN LA SUBCOMUNIDAD: 4,33%. 
+          CRU.- 46046000870078. 
+          REFERENCIA CATASTRAL.- 
+          DIRECCIÓN CATASTRAL.- 
+          SITUACIÓN POSESORÍA.- no 
+          consta. Lote 19:  Finca 72.486 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 57. 
+           
+          DESCRIPCIÓN.- NÚMERO DIECINUEVE: PLAZA DE GARAJE NÚMERO DIECINUEVE en la planta 
+          semisótano del edificio en construcción sito en Sagunto Puerto, partida UA nº23, con 
+          fachada a la calle Río Guadalquivir, s/n. La plaza de garaje tiene una superficie útil de 12,24 metros cuadrados, y construida de 13,10 metros cuadrados. Linda tomando como frente su 
+          acceso: derecha entrando, plaza de garaje número 18; izquierda, plaza de garaje número 
+          20; y fondo, muro que la separa de finca colindante. CUOTA DE PARTICIPACIÓN: 0,59%. 
+          CUOTA DE PARTICIPACIÓN EN LA SUBCOMUNIDAD: 4,33%. 
+          CRU.- 46046000870085. 
+          REFERENCIA CATASTRAL.- 
+          DIRECCIÓN CATASTRAL.- 
+          SITUACIÓN POSESORÍA.- no 
+          consta. Lote 20:  Finca 72.487 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 60. 
+           
+          DESCRIPCIÓN.- NÚMERO VEINTE: PLAZA DE GARAJE NÚMERO VEINTE en la planta 
+          semisótano del edificio en construcción sito en Sagunto Puerto, partida UA nº23, con 
+          fachada a la calle Río Guadalquivir, s/n. La plaza de garaje tiene una superficie útil de 12,28 
+          metros cuadrados, y construida de 14,54 metros cuadrados. Linda tomando como frente su 
+          acceso: derecha entrando, plaza de garaje número 19; izquierda, muro que la separa de finca 
+          colindante; y fondo, muro que la separa de finca colindante. CUOTA DE PARTICIPACIÓN: 
+          0,65%. CUOTA DE PARTICIPACIÓN EN LA SUBCOMUNIDAD: 4,80%. 
+          CRU.- 46046000870092. 
+          REFERENCIA CATASTRAL.- 
+          DIRECCIÓN CATASTRAL.- 
+          SITUACIÓN POSESORÍA.- no 
+          consta Lote 21: Finca 72.488 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 63. 
+           
+          DESCRIPCIÓN.- NÚMERO VEINTIUNO.- VIVIENDA NE PLANTA BAJA, TIPO 0A, del edificio en 
+          construcción sito en Sagunto Puerto, partida UA nº23, con fachada a la calle Río Guadalquivir, 
+          s/n. con acceso por el zaguán recayente a la calle Río Guadalquivir, s/n de policía urbana. 
+          Esta vivienda se compone de estar comedor, cocina, vestíbulo, tres habitaciones, dos 
+          dobles y una principal, y dos baños completos, y una terraza. SU superficie útil, sin inclusión 
+          de la terraza ni elementos comunes, es de 82,72 metros cuadrados, y la construida es de 96,08 
+          metros cuadrados. Linda tomando como frente la medianera con finca colindante; izquierda, 
+          vivienda 0B de su misma planta, patio de luces 3, zaguán de acceso a las viviendas y patio 
+          de luces 1; y al fondo, zaguán de acceso a la vivienda y medianera con finca colindante. Esta 
+          vivienda tiene además el uso exclusivo de la terraza del patio de luces 3 delimitado con tabique 
+          divisorio, y el patio de luces 1. CUOTA DE PARTICIPACIÓN 5,76%. 
+          CRU.- 46046000870108. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0017YL. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:1  Pl:00  
+          Pt:A 46520 SAGUNTO / SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. 
+           
+          22. Finca 72.489 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 66. 
+            Lote 22: Finca 72.489 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 66. 
+           
+          DESCRIPCIÓN.- NÚMERO VEINTIDÓS.- VIVIENDA EN PLANTA BAJA, TIPO 0B,  del edificio en 
+          construcción sito en Sagunto Puerto, partido UA, nº23, con fachada a la calle RIO Guadalquivir, s/n. con acceso por el zaguán recayente a la calle Río Guadalquivir, s/n de 
+          policía urbana. Esta vivienda se compone de estar comedor cocina, vestíbulo, dos 
+          habitaciones, una doble y una principal, un baño completo, un vestíbulo, y una terraza. Su 
+          superficie útil, sin inclusión de terraza ni elementos comunes, es de 57,25 metros cuadrados, 
+          y la construida es de 64,97 metros cuadrados. Linda tomando como frente la calle Río 
+          Guadalquivir: al frente, dicha calle; derecha, vivienda 0A de su misma planta, patio de luces 
+          3; izquierda, vivienda 0C de su misma planta; y al fondo, zagua de acceso a la vivienda y 
+          medianera con finca colindante. Esta vivienda tiene además uso exclusivo de la terraza del 
+          patio de luces 3 delimitado con tabique divisorio, y el patio de luces 1. CUOTA DE 
+          PARTICIPACIÓN 9,89%. 
+          CRU.- 46046000870115. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0018UB. 
+           
+          DIRECCIÓN CATASTRAL.- CL RIO
+           GUADALQUIVIR 15 Es:1 Pl:00 Pt:B 46520 SAGUNTO / 
+          SAGUNT (VALENCIA).  Lote 23: Finca 72.490 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 69. 
+           
+          DESCRIPCIÓN.- NÚMERO VEINTITRÉS. VIVIENDA EN PLANTA BAJA, TIPO 0C del edificio en 
+          construcción sito en Sagunto Puerto, partida UA nº23, con fachada a la calle Río 
+          Guadalquivir, s/n., con acceso por el zaguán recayendo a la calle Río Guadalquivir, s/n de 
+          policía urbana. Esta vivienda se compone de estar comedor cocina, dos habitaciones, una 
+          doble y otra principal, un baño completo, un vestíbulo, y una terraza. Su superficie útil, sin 
+          inclusión de terraza ni elementos comunes, es de 58,585 metros cuadrados, y la construida 
+          es de 66,77 metros cuadrados. Linda tomando como frente la calle Río Guadalquivir: al 
+          frente, dicha calle; derecha, vivienda 0B de su misma planta; izquierda, escaleras de acceso 
+          común del edificio y patio de luces4; y al fondo, zaguán de acceso a la vivienda. Esta vivienda 
+          tiene además el uso exclusivo de la terraza del patio de luces 4 delimitado con tabique divisorio. 
+          CUOTA DE PARTICIPACIÓN: 4%. 
+          CRU.- 46046000870122. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0019IZ. 
+           
+          DIRECCIÓN CATASTRAL.- CL RIO
+           GUADALQUIVIR 15 Es:1 Pl:00 Pt:C 46520 SAGUNTO / 
+          SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta Lote 24:  Finca 72.491 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 72. 
+           
+          DESPCRIPCIÓN.- NÚMERO VEINTICUATRO. VIVIENDA EN PLANTA BAJA, TIPO 0D, del edificio en 
+          construcción sito en Sagunto Puerto, UA nº23, con fachada a la calle Río Guadalquivir, s/n, 
+          con acceso por el zaguán recayente a la calle Río Guadalquivir, s/n de policía urbana. Esta 
+          vivienda se compone de tres habitaciones, dos dobles y una principal, con dos baños 
+          completos, un vestíbulo y un estar comedor vinculado a la terraza recayente a fachada. Su 
+          superficie útil, sin inclusión de terraza ni elementos comunes, es de 85,49 metros cuadrados, 
+          y la construida es de 100,76 metros cuadrados. Linda tomando como frente la calle Río 
+          Guadalquivir: al frente, dicha calle; derecha, instalaciones comunes de montacoches, 
+          eléctricas, agua y RITI, zaguán de acceso a la vivienda y patio 2 del edificio; izquierda, 
+          medianera con finca contigua y patio de luces 5; y al fondo, medianera con finca colindante. 
+          Esta vivienda tiene además el uso exclusivo de la terraza del patio de luces 5, y patio de 
+          luces 2. CUOTA DE PARTICIPACIÓN 6,04%. 
+          CRU.- 46046000870139. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0020YL. 
+           
+          DIRECCIÓN CATASTRAL.- CL RIO
+           GUADALQUIVIR 15 Es:1 Pl:00 Pt:D 46520 SAGUNTO / 
+          SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. Lote 25: Finca 72.492 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 75. 
+           
+          DESCRIPCIÓN.- NÚMERO VEINTICINCO.- VIVIENDA EN PLANTA PRIMERA TIPO 1A, del edificio en 
+          construcción sito en Sagunto Puerto, UA nº23, con fachada a la calle Río Guadalquivir, s/n, 
+          con acceso por el zaguán recayente a la calle Río Guadalquivir, s/n de policía urbana. Esta 
+          vivienda se compone de estas comedor concina, vestíbulo, tres habitaciones, dos dobles y 
+          una principal, con dos baños completos, y una terraza. Su superficie útil, sin inclusión de 
+          terraza ni elementos comunes, es de 82,99 metros cuadrados, y la construida es de 97,43 
+          metros cuadrados. Linda tomando con frente la calle Río Guadalquivir: al frente, vuelo dicha 
+          calle; derecha, medianera con la finca colindante; izquierda, vivienda 1B de su misma planta, 
+          vuelo patio de luces 3, zaguán de acceso a las viviendas y vuelo patio de luces 1; y al fondo, 
+          zaguán de acceso a la vivienda y medianera con finca colindante. CUOTA DE 
+          PARTICIPACIÓN: 5,84%. 
+          CRU.- 46046000870146. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0021UB. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:1  Pl:01  
+          Pt:A 46520 SAGUNTO / SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. Lote 26: Finca 72.493 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 78. 
+           
+          DESCRIPCIÓN.- NÚMERO VEINTISÉIS.- VIVIENDA EN PLANTA PRIMERA, TIPO 1B, del edificio en 
+          construcción sito en Sagunto Puerto, partida UA nº23, con fachada a la calle Río Guadalquivir, 
+          s/n con acceso por el zaguán recayente a la calle Río Guadalquivir, s/n de policía urbana. Esta 
+          vivienda se compone de estar comedor cocina, dos habitaciones, una doble y otra principal, 
+          un baño completo, un vestíbulo, y una terraza. Su superficie útil, sin inclusión de terraza ni 
+          elementos comunes, es de 57,80 metros cuadrados, y la construida es de 66,16 metros 
+          cuadrados. Linda tomando como frente la calle Río Guadalquivir: al frente, vuelo dicha calle; 
+          derecha, vivienda 1A de su misma planta y vuelo patio de luces 3; izquierda, vivienda 1C de 
+          su misma planta; y al fondo zaguán de acceso a la vivienda. CUOTA DE PARTICIPACIÓN: 
+          3,97%. 
+          CRU.-46046000870153. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0022IZ. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:1  Pl:01  
+          Pt:B 46520 SAGUNTO / SAGUNT (VALENCIA).  Lote 27: construcción sito en Sagunto Puerto, partida UA nº23, con fachada a la calle Río Guadalquivir, 
+          s/n. con acceso por el zaguán recayente a la calle Río Guadalquivir, s/n de policía urbana. Esta 
+          vivienda se compone de estar comedor cocina, dos habitaciones, una doble y otra principal, 
+          un baño completo, un vestíbulo, y una terraza. Su superficie útil, sin inclusión de terraza ni 
+          elementos comunes, es de 57,80 metros cuadrados, y la construida es de 66,16 metros 
+          cuadrados. Linda tomando como frente la calle Río Guadalquivir: al frente, vuelo dicha calle; 
+          derecha, vivienda 1B de su misma planta; izquierda, vivienda 1D de su misma planta, y vuelo 
+          patio de luces; y al fondo, zaguán de acceso a la vivienda. CUOTA DE PARTICIPACIÓN: 3,97%. 
+          CRU.- 46046000870160. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0023OX. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:1  Pl:01  
+          Pt:C 46520 SAGUNTO / SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. Lote 28:  Finca 72.495 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 84. 
+           
+          DESCRIPCIÓN.- NÚMERO VEINTIOCHO.- VIVIENDA EN PLANTA PRIMERA, TIPO 1D, del edificio sito 
+          en Sagunto Puerto, partida UA nº23, con fachada a la calle Río Guadalquivir, con acceso por 
+          el zaguán recayente a la calle Río Guadalquivir, s/n de policía urbana. Esta vivienda se 
+          compone de estar comedor cocina, dos habitaciones, una doble y otra principal, un baño 
+          completo, un vestíbulo, y una terraza. Su superficie útil, sin inclusión de terraza ni elementos 
+          comunes, es de 57, 80%, y la construida es de 66,16%. Linda tomando como frente la calle Río 
+          Guadalquivir: al frente, vuelo dicha calle; derecha vivienda 1C de su misma planta, y vuelo 
+          patio de luces 4; izquierda, vivienda 1E de su misma planta; y al fondo, zaguán de acceso a 
+          la vivienda. CUOTA DE PARTICIPACIÓN: 3,97%. 
+          CRU.- 46046000870177. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0024PM. 
+           
+          DIRECCIÓN CATASTRAL.- CL RIO
+           GUADALQUIVIR 15 Es:1 Pl:01 Pt:D 46520 SAGUNTO / 
+          SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. Lote 29: Finca 72.496 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 87. 
+           
+          DESCIPCIÓN.- NÚMERO VEINTINUEVE.- VIVIENDA EN PLANTA PRIMEAR, TIPO 1E, del edificio en 
+          construcción sito en Sagunto Puerto, partida UA nº23, con fachada a la calle Río Guadalquivir, 
+          s/n. con acceso por el zaguán recayendo a la calle Río Guadalquivir, s/n de policía urbana. 
+          Esta vivienda se compone de tres habitaciones, dos dobles y una principal, con dos baños 
+          completos, un vestíbulo y un estar comedor vinculado a la terraza recayente a fachada. Su 
+          superficie útil, sin inclusión de terraza ni elementos comunes, es de 86,90 metros 
+          cuadrados, y la construida es de 102,08 metros cuadrados. Linda tomando como frente la 
+          calle Río Guadalquivir: al frente, vuelo dicha calle; derecha, vuelo del patio número 2, zaguán 
+          de acceso a la vivienda y la vivienda 1D de su misma planta; izquierda, medianera con finca 
+          colindante y vuelo patio 5; y al fondo, muro que lo separa de finca colindante. CUOTA DE 
+          PARTICIPACIÓN: 6,12%.  Lote 30:  Finca 72.497 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 90. 
+           
+          DESCRIPCIÓN.- NÚMERO TREINTA.- VIVIENDA EN PLANTA SEGUNDA, TIPO 2A, del edificio en 
+          construcción sito en Sagunto Puerto, partida UA nº23, con fachada a la calle Río Guadalquivir, 
+          s/n de policía urbana. Esta vivienda se compone de estar comedor cocina, vestíbulo, tres 
+          habitaciones, dos dobles y una principal, y dos baños completos, y una terraza. Su superficie 
+          útil, sin inclusión de terraza ni elementos comunes, es de 82,99 metros comunes, y la 
+          construida es de 97,43 metros cuadrados. Linda tomando como frene la calle Río Guadalquivir: 
+          al frente, vuelo dicha calle; derecha, medianera con la finca colindante; izquierda, vivienda 2B 
+          de su misma planta, vuelo patio de luces 3, zaguán de acceso a las viviendas y vuelo patio 
+          de luces 1; y al fondo, zaguán de acceso a la vivienda y medianera con finca colindante. 
+          CUOTA PARTICIPACIÓN: 5,84€. 
+          CRU.- 46046000870191. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0026SW. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:1  Pl:02  
+          Pt:A 46520 SAGUNTO / SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. Lote 31: Finca 72.498 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 93. 
+           
+          DESCRIPCIÓN.- NÚMERO TREINTA Y UNO.- VIVIENDA EN PLANTA SEGUNDA TIPO 2B, del edificio 
+          en construcción sito en Sagunto Puerto, partida UA nº23, con fachada a la calle Río 
+          Guadalquivir, s/n. con acceso por el zaguán recayente a la calle Río Guadalquivir, s/n de 
+          policía urbana. Esta vivienda se compone de estar comedor cocina, dos habitaciones, una 
+          doble y otra principal, un baño completo, un vestíbulo, y una terraza. Su superficie útil, sin 
+          inclusión de terraza ni elementos comunes, es de 57,80 metros cuadrados, y la construida 
+          es de 66,16 metros cuadrados. Linda tomando como frente la calle Río Guadalquivir: al frente, vuelo dicha calle; 
+          derecha, vivienda 2A de su misma planta y vuelo patio de luces 3; izquierda, vivienda 2C de 
+          su misma planta; y al fondo, zaguán de acceso a la vivienda. CUOTA DE PARTICIPACIÓN: 
+          3,97%. 
+          CRU.- 46046000870207. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0027DE. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:1  Pl:02  Pt:B 
+          46520 SAGUNTO / SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. Lote 32: Finca 72.499 del Registro de la Propiedad de Sagunto Nº1. - Inscrita al Tomo 2740. Libro 900. Folio 96. 
+           
+          DESCRIPCIÓN.- NÚMERO TREINTA Y DOS.- VIVIENDA EN PLANTA SEGUNDA TIPO 2C, del edificio 
+          en construcción sito en Sagunto Puerto partida UA nº23, con fachada a la calle Río 
+          Guadalquivir, s/n. con acceso por el zaguán recayendo a la calle Río Guadalquivir, s/n de 
+          policía urbana. Esta vivienda se compone de estar comedor cocina, dos habitaciones, una 
+          doble y otra principal, un baño completo, un vestíbulo, y una terraza. Su superficie útil, sin 
+          inclusión de terraza ni elementos comunes, es de 57,80 metros cuadrados, y la construida 
+          es de 66,16 metros cuadrados. Linda tomando como frente la calle Río Guadalquivir: al frente, 
+          vuelo dicha calle; derecha, vivienda 2B de su misma planta; izquierda, vivienda 2D de su 
+          misma planta, y vuelo patio de luces 4; y al fondo, zaguán de acceso a la vivienda. CUOTA 
+          DE PARTICIPACIÓN: 3,97%. 
+          CRU.- 46046000870214. 
+           
+          REFERENCIA CATASTRAL.- 93445C4YJ3994E0028FR. 
+           
+          DIRECCIÓN  CATASTRAL.-  CL  RIO  GUADALQUIVIR  15  Es:1  Pl:02  
+          Pt:C 46520 SAGUNTO / SAGUNT (VALENCIA). 
+          SITUACIÓN POSESORÍA.- no consta. Lote 33: VIVIENDA. LA DESCRIPCION DE ESTE BIEN SE ENCUENTRA A DISPOSICION DEL INTERESADO EN EL EDICTO DE PUBLICACION Y POR MOTIVOS DE ESPACIO INFORMATICO AQUI NO SE REPRODUCE. Lote 34: VIVIENDA. LA DESCRIPCION DE ESTE BIEN SE ENCUENTRA A DISPOSICION DEL INTERESADO EN EL EDICTO DE PUBLICACION Y POR MOTIVOS DE ESPACIO INFORMATICO AQUI NO SE REPRODUCE. Lote 35: VIVIENDA. LA DESCRIPCION DE ESTE BIEN SE ENCUENTRA A DISPOSICION DEL INTERESADO EN EL EDICTO DE PUBLICACION Y POR MOTIVOS DE ESPACIO INFORMATICO AQUI NO SE REPRODUCE. Lote 36: VIVIENDA. LA DESCRIPCION DE ESTE BIEN SE ENCUENTRA A DISPOSICION DEL INTERESADO EN EL EDICTO DE PUBLICACION Y POR MOTIVOS DE ESPACIO INFORMATICO AQUI NO SE REPRODUCE. Lote 37: VIVIENDA. LA DESCRIPCION DE ESTE BIEN SE ENCUENTRA A DISPOSICION DEL INTERESADO EN EL EDICTO DE PUBLICACION Y POR MOTIVOS DE ESPACIO INFORMATICO AQUI NO SE REPRODUCE. Lote 38: VIVIENDA. LA DESCRIPCION DE ESTE BIEN SE ENCUENTRA A DISPOSICION DEL INTERESADO EN EL EDICTO DE PUBLICACION Y POR MOTIVOS DE ESPACIO INFORMATICO AQUI NO SE REPRODUCE. </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259127&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-259127"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259127&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-259127">Más... (Referencia SUB-JA-2026-259127)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-259129</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0418/22</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 13/04/2026 a las 18:00:00]</p>
+                <p>URBANA. NÚMERO DIECISIETE. Piso o vivienda denominada V.3.1, situado en la planta tercera, del Conjunto de Edificación, compuesto de una sola escalera, construida sobre la agrupación de las parcelas E-9 y E-10 del polígono único Zona playa de Guardamar, Valencia. Ocupa una superficie construida aproximada de setenta y dos metros y dieciséis decímetros cuadrados -72,16 m2- y una superficie útil aproximada de cincuenta y dos metros y sesenta decímetros cuadrados - 52,60 m2-. Se distribuye en pasillo distribuidor, cocina, salón, dos dormitorios, un baño y terraza. LINDA: por su frente, por donde tiene su entrada, con corredor de acceso a viviendas; por la derecha entrando, con vuelo zona común de acceso al portal; por la izquierda, con la vivienda V.3.2; y por el fondo, con vuelo zona de acceso rodado de plazas de garaje y calle de L'estany. Cuota: Se le asigna una cuota o participación en el valor total del inmueble, elementos y gastos comunes de 2/38%. Forma parte del edificio denominado Residencial Los Naranjos II situado en la Playa de Guardamar, Avenida del País Valencià, nº 3.
+           </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259129&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-259129"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259129&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-259129">Más... (Referencia SUB-JA-2026-259129)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-258251</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 1198/22</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 09/04/2026 a las 18:00:00]</p>
+                <p>FINCA REGISTRAL Nº 5641. VIVIENDA UNIFAMILIAR O CHALET, SITA EN CL ALQUERIETA DE L' 18 Es:1 Pl:00 Pt:01 46711 MIRAMAR (VALENCIA) </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258251&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-258251"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258251&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-258251">Más... (Referencia SUB-JA-2026-258251)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-258287</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0718/22</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 09/04/2026 a las 18:00:00]</p>
+                <p>FINCA N.º 24.678 DE SILLA INSCRITA EN EL REGISTRO DE LA PROPIEDAD 
+          DE PICASSENTE-2, AL TOMO 2971, LIBRO 460, FOLIO 171 y cuya descripción 
+          es la siguiente: URBANA CINCUENTA Y SEIS.- Vivienda en octava planta aIta, 
+          tipo F, puerta cuarenta y cuatro, con acceso por el zaquán de entrada del 
+          edificio situado en SilIa, con fachadas a las calles Avenida de Alicante y 
+          Avenida de L`Albufera, número treinta y cuatro en cuya confluencia se ubica 
+          el zaguán de entrada del edificio, y fachada también a calle Avenida Manuel 
+          Broseta Pont y calle en Proyecto, recayente a zona de retranqueo exterior en 
+          Ia confluencia de la Avenida de Alicante y Avenida de L`Albufera. En el 
+          término municipal de Silla. Distribuida en vestíbulo, salón-comedor, tres 
+          dormitorios, cocina, dos baños y balcón. Tiene una superficie útil de 96,34 
+          m2 y construida de 113,74 m2. </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258287&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-258287"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258287&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-258287">Más... (Referencia SUB-JA-2026-258287)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-258790</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0210/12</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 09/04/2026 a las 18:00:00]</p>
+                <p>VIVIENDA IZQUIERDA, VISTA DESDE LA CALLE , DEL PISO SEGUNDO, TIPO B, QUE TIENE SU ACCESO POR EL ZAGUÁN Y 
+          ESCALERA DE LOS ALTOS, CON SERVICIO DE ASCENSOR, COMPRENDE UNA 
+          SUPERFICIE ÚTIL DE OCHENTA Y NUEVE METROS, NOVENTA Y SEIS 
+          DECÍMETROS CUADRADOS Y VISTA DESDE EL PARQUE DE L'ESTACIÓ, DONDE 
+          RECAR SU FACHADA, LINDA: FRENTE, PLAZA PARC DE L'ESTACIÓ; DERECHA 
+          ENTRANDO, VIVIENDA DE ESTE PISO, TIPO A, ZAGUÁN Y ESCALERA Y 
+          ASCENSOR EN MEDIO; IZQUIERDA, DE PROCOMI, S.L.; Y FONDO, FINCA DE 
+          MATEY Y BONET S.A. Y EN PARTE PATIO DE LUCES.
+           </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258790&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-258790"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-258790&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-258790">Más... (Referencia SUB-JA-2026-258790)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-259081</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 1321/18</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 09/04/2026 a las 18:00:00]</p>
+                <p>Vivienda sita en la calle San Vicente Mártir 332, puerta
+          ONCE, CP 46017 Tipo A. Superficie construida 99,97 metros cuadrados. Distribuida interiormente. Lindante: frente, calle de San Vicente; derecha mirando a fachada, vivienda en igual planta de la otra unidad; izquierda, vivienda izquierda, rellano de planta, caja de escalera У patio de luces; y fondo, dicho patio de luces y como el inmueble. Porcentaje: 2,90 por ciento.
+          Es parte de la finca nº 19.877, al folio 83 del tomo 1.501, libro 208 de la Sección 3ª de Afueras, inscripciones 2 y 3ª. REGISTRO DE LA PROPIEDAD Nº 16 </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259081&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-259081"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259081&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-259081">Más... (Referencia SUB-JA-2026-259081)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-RC-2026-4690000146926</h3>
+                <h4>Ayuntamiento de Torrent - Torrent </h4>
+                <p>Estado: Celebrándose - [Conclusión prevista: 09/04/2026 a las 18:00:00]</p>
+                <p>LOCAL COMERCIAL EN EL CENTRO COMERCIAL LAS AMÉRICAS DE TORRENT DE 558'79 M2
+          REGISTRAL 49576, REFERENCIA CATASTRAL 6774801YJ1667S0013HS </p>
+                <a href="./detalleSubasta.php?idSub=SUB-RC-2026-4690000146926&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-RC-2026-4690000146926"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-RC-2026-4690000146926&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-RC-2026-4690000146926">Más... (Referencia SUB-RC-2026-4690000146926)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="resultado-busqueda">
+                <h3>SUBASTA SUB-JA-2026-259140 (2 lotes)</h3>
+                <h4>SERVICIO COMUN GENERAL SUBASTAS - VALENCIA </h4>
+                <p>Expediente: 0053/21</p>
+                <p>Estado: Celebrándose - [Conclusión prevista: 09/04/2026 a las 00:58:22]</p>
+                <p>Subasta con varios lotes. Lote 1: FINCA REGISTRAL Nº 38898. VIVIENDA SITA EN CL VELARDE 5 Es:1 Pl:03 Pt:10 46520 SAGUNTO / SAGUNT (VALENCIA) Lote 2: FINCA REGISTRAL Nº 38850. PLAZA DE APARCAMIENTO SITA EN AV CAMP MORVEDRE 72 Es:1 Pl:-1 PLAZA:14 46520 SAGUNTO / SAGUNT (VALENCIA) </p>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259140&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-defecto" title="Subasta SUB-JA-2026-259140"> </a>
+                <ul>
+                  <li class="puntoHTML">
+                    <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259140&amp;idBus=bjhwRjhjeFVVblNaYjlNUklwY3VVNVZuODNqcjJxTlNlRFZ2aWhrY0QzOXhHd05wd1pjY1JVZ3F6S3FlOHlwK3NSYnU3ZVYwc1pQNUI5NTh4clRrYXhPRldoK09JRUxCVmplK2wvVTd0a1JqbmFVc0EzdXBlNk5QaHN2WnRUUVBzSmlZT1h4VVRMY2xrSThNZTBlV3dSNjNRL2VmQ0J4a1dzS1A0WUo3aWJGNlB4cWZOVWFaNVVLd3M2MktweG10TkpJOXYxK2hvN3FYeUYyRmNrazJhZm5mVWpoZWRSODlkTklFeGNma0M5enJYanZjazNCUEVLMWhTc01NbWhINEppRjdybG4rRENDVU5IY1pxV0ZNcW1wa0N2bDI2WDZIY2xIMTFIRi9UdCs0bUUyajhITEF6ZTNnSm9OMmY1RWxUSEJTNnU0SWZNYXhDRVFVWXdOU0x3PT0,--50" class="resultado-busqueda-link-otro" title="Subasta SUB-JA-2026-259140">Más... (Referencia SUB-JA-2026-259140)</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="paginar">
+            <p class="linkSubir">
+              <a href="#top">subir</a>
+            </p>
+          </div>
+          <div class="paginar2">
+            <ul/>
+          </div>
+        </div> <!-- /contenido -->
+      </div> <!-- /contenedor -->
+    </div> <!-- #cuerpo -->
+    <div id="pie">
+      <div id="menuPie">
+        <div class="franjaMenu">
+          <ul>
+            <li><a href="https://subastas.boe.es/textoPolitica.php" target="_blank" title="Abre nueva ventana">Acerca del Portal</a></li>
+          </ul>
+        </div> <!-- .franjaMenu -->
+      </div> <!-- #menuPie -->
+      <div class="franja-pie">
+        <p>Agencia Estatal Bolet&#xED;n Oficial del Estado</p>
+        <p><abbr title="Avenida">Avda.</abbr> de Manoteras, 54 - 28050 Madrid</p>
+      </div>
+    </div> <!-- #pie -->
+    <script src="/lib/js/desplegable.js"></script>
+  </body>
+</html>

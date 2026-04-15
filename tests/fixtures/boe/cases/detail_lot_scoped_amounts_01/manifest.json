@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "case_id": "detail_lot_scoped_amounts_01",
+  "source": "boe",
+  "page_kind": "detail",
+  "fixture_status": "sanitized_from_raw",
+  "origin_url": "<URL_REAL>",
+  "capture_date": "2026-04-08",
+  "raw_file": "../../raw/detail_lot_scoped_amounts_01/raw.html",
+  "sanitized_file": "sanitized.html",
+  "expected_file": "expected.json",
+  "sanitizer_version": 1
+}

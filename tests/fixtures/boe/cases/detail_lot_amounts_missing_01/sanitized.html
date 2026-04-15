@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Portal de Subastas Electr&#xF3;nicas</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="Keywords" content="Subastas">
+    <meta name="Description" content="Portal de Subastas de la Agencia Estatal Bolet&#xED;n Oficial del Estado">
+    <!--[if lt IE 10]>
+    <link rel="stylesheet" type="text/css" href="/estilos/subastas_ie9.css" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="/estilos/subastas_ie8.css" />
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="/estilos/portalSubastas.css" title="comun" type="text/css"/>
+    <link rel="stylesheet" href="/estilos/form.css" title="comun" type="text/css"/>
+  </head>
+  <body>
+    <!-- Cabecera -->
+    <div id="cabecera">
+      <!-- Accesibilidad -->
+      <ul class="fuera">
+        <li><a accesskey="c" href="#contenido">Ir a contenido</a></li>
+      </ul>
+      <!-- Comienza la franja blanca con logos y enlaces a la derecha -->
+      <div id="logoInicio">
+        <span class="pc tablet" id="logoPresidenciaMovil">
+          <a href="https://www.mpr.gob.es/" title="Ir al Ministerio de la Presidencia">
+            <img src="/imagenes/logoMPRmovil.png" alt="Ministerio de la Presidencia">
+          </a>
+        </span>
+        <span id="logoPresidencia">
+          <a href="https://www.mpr.gob.es/" title="Ir al Ministerio de la Presidencia">
+            <img src="/imagenes/logoMPR.png" srcset="/imagenes/logoMPR.svg" alt="Ministerio de la Presidencia">
+          </a>
+        </span>
+        <span class="movil">
+          <a href="/" title="Ir a la p&#xE1;gina de inicio">
+            <img alt="Portal de Subastas" src="/imagenes/portal_subastas_270.png" srcset="/imagenes/portal_subastas_270.svg" />
+          </a>
+        </span>
+      </div><!-- Fin de logoInicio -->
+      <h1>
+        <a href="/" title="Ir a la p&#xE1;gina de inicio">
+          Portal de Subastas
+        </a>
+      </h1>
+      <p class="fuera">Portal de Subastas de la Agencia Estatal Bolet&#xED;n Oficial del Estado</p>
+      <span id="logoBOE">
+        <a href="https://www.boe.es" title="Ir a la p&#xE1;gina de la Agencia Estatal Bolet&#xED;n Oficial del Estado">
+          <img src="/imagenes/logo_boe.png"  alt="Agencia Estatal Bolet&#xED;n Oficial del Estado">
+        </a>
+      </span>
+    </div> <!-- #cabecera -->
+    <!-- Cuerpo -->
+    <div id="cuerpo">
+      <div id="top" class="banda-menu">
+        <div id="menu_principal" class="menu-wrapper">
+          <ul>
+            <li class="inicio pc tablet">
+              <a href="https://subastas.boe.es/reg/index.php"><span>Inicio</span></a>
+            </li>
+            <li class="buscar">
+              <a href="https://subastas.boe.es/reg/subastas_ava.php">
+                <span class="pc tablet">Buscar</span>
+                <span class="movil"><img alt="Buscar" src="/imagenes/logoBuscar_blanco.png" srcset="/imagenes/logoBuscar_blanco.svg"></span>
+              </a>
+            </li>
+            <li class="ayuda">
+              <a href="https://subastas.boe.es/reg/ayuda.php">
+                <span class="pc tablet">Ayuda</span>
+                <span class="movil"><img alt="Ayuda" src="/imagenes/ayuda.png" srcset="/imagenes/ayuda.svg"></span>
+              </a>
+            </li>
+            <li class="botonAcceso_on ico_acceso">
+              <a href="https://subastas.boe.es/reg/misDatos.php">
+                <span class="pc tablet">
+                  Mi Perfil 
+                  <span class="luz">Conectado como:<br/>CARLOS JAVIER BLANCO SEGURA</span>
+                </span>
+                <span class="movil"><img alt="Mi Perfil" src="/imagenes/logoAcceso_on.png" srcset="/imagenes/logoAcceso_on.svg"></span>
+              </a>
+            </li>
+          </ul>
+        </div><!-- #menu_principal -->
+      </div><!-- .banda-menu -->
+      <p class="disclaimer">
+        <span id="fechaOficial">Mi&#xE9;rcoles, 08 de abril de 2026</span>
+        <span id="horaOficial">15:48:10</span>
+        <span id="usoHorario" title="Hora Central Europea / Central European Time">CET</span>
+      </p>
+      <script>
+         var hoy = new Date(2026,4-1,8,15,48,10); 
+         function reloj(){
+            var hora = hoy.getHours(); 
+            var minutos = hoy.getMinutes(); 
+            var segundos = hoy.getSeconds(); 
+            if (hora<=9) hora = "0" + hora; 
+            if (minutos<=9) minutos = "0" + minutos; 
+            if (segundos<=9) segundos = "0" + segundos; 
+            var horaFinal = hora + ":" + minutos + ":" + segundos; 
+            var dia = new Array('Domingo','Lunes','Martes','Mi&#xe9;rcoles','Jueves','Viernes','S&#xe1;bado'); 
+            var mes = new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'); 
+            var anio = hoy.getFullYear(); 
+            var fecha = dia[hoy.getDay()] + ', ' + hoy.getDate() + ' de '  + mes[hoy.getMonth()] + ' de ' + anio ; 
+
+            document.getElementById('fechaOficial').innerHTML = fecha;
+            document.getElementById('horaOficial').innerHTML = horaFinal;
+
+            hoy.setSeconds(hoy.getSeconds() +1);
+            setTimeout('reloj()',1000);
+         } 
+         reloj();
+      </script>
+      <div id="contenedor">
+        <div id="contenido">
+          <div class="desconectar">
+            <a href="https://subastas.boe.es/reg/desconectar.php">Desconectar <img alt="desconectar" src="/imagenes/logout.png" srcset="/imagenes/logout.svg"></a>
+          </div>
+          <h2>Subasta SUB-JA-2026-259127</h2>
+          <div class="desconectar">
+            <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259127&amp;ver=1&amp;idBus=YnZzaUw5NmgrTG9zSGxNMWdVTW84RjhDc2dWK3U2cGpHM0h4cE82d3Nyakd1eEpBdkpsbGpEMVpoeXFubVI3TGhUem02ekZXSE5OUjRwRVFPdU9JL2FQcjNrdGhib1JZaXpSbk5LbVc5MjJvQkJScVIzeFpNbjVUTjEwbmdjSWlDQmdDR3ZCSkF4Wm1CQklpUk4vSWsxUHR0OGVQamlDN2RvcW5JdjVncGJNY2xmVzN2M29BODl5REVYaCs3enJZaFlENWp6Z1JjalNNa3JvdTNRRmNVdUNhc3FoVm9KYkNIRjVlb3ZlNWJqdHpaMFFPKzhRRXlobm0xNkhldURMSGZQa01HWkF5bEZXWFhMR3orM2dINDhqdHFlUXlFV3d3anlUTFFqbmdRd2NIVFZjTDl3SVJoUlBmVEh4RXR3aUxHeHE2QllJZTB3cVJBL29OZmlGaTF0QUhEWWlBOEh4M3QwVHZZTk1zam9vPQ,,--50&amp;acc=A">A&#xF1;adir a favoritas <img alt="A&#xF1;adir favorita" src="/imagenes/favicon_on.png" srcset="/imagenes/favicon_on.svg"></a>
+          </div>
+
+          <div class="caja gris aviso">
+            <p><strong>ADVERTENCIA:</strong> De acuerdo a lo establecido por la autoridad gestora, <strong>durante el plazo de ejecuci&#xF3;n de esta subasta, </strong><strong><span class="destaca">la puja m&#xE1;s alta realizada es p&#xFA;blica y existe posibilidad de pr&#xF3;rroga hasta un m&#xE1;ximo de 24 horas</span></strong>.</p>
+          </div>
+          <div id="tabs">
+            <input type="checkbox" class="desplegable" id="dropDownFiltro" value="" name="dropDownFiltro"/>
+            <label class="selected" for="dropDownFiltro" data-toggle="dropdown">Informaci&#xF3;n general</label>
+            <ul class="navlist">
+              <li>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259127&amp;ver=1&amp;idBus=YnZzaUw5NmgrTG9zSGxNMWdVTW84RjhDc2dWK3U2cGpHM0h4cE82d3Nyakd1eEpBdkpsbGpEMVpoeXFubVI3TGhUem02ekZXSE5OUjRwRVFPdU9JL2FQcjNrdGhib1JZaXpSbk5LbVc5MjJvQkJScVIzeFpNbjVUTjEwbmdjSWlDQmdDR3ZCSkF4Wm1CQklpUk4vSWsxUHR0OGVQamlDN2RvcW5JdjVncGJNY2xmVzN2M29BODl5REVYaCs3enJZaFlENWp6Z1JjalNNa3JvdTNRRmNVdUNhc3FoVm9KYkNIRjVlb3ZlNWJqdHpaMFFPKzhRRXlobm0xNkhldURMSGZQa01HWkF5bEZXWFhMR3orM2dINDhqdHFlUXlFV3d3anlUTFFqbmdRd2NIVFZjTDl3SVJoUlBmVEh4RXR3aUxHeHE2QllJZTB3cVJBL29OZmlGaTF0QUhEWWlBOEh4M3QwVHZZTk1zam9vPQ,,--50&amp;idLote=&amp;numPagBus=" class="current">Informaci&#xF3;n general</a>
+              </li>
+              <li>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259127&amp;ver=2&amp;idBus=YnZzaUw5NmgrTG9zSGxNMWdVTW84RjhDc2dWK3U2cGpHM0h4cE82d3Nyakd1eEpBdkpsbGpEMVpoeXFubVI3TGhUem02ekZXSE5OUjRwRVFPdU9JL2FQcjNrdGhib1JZaXpSbk5LbVc5MjJvQkJScVIzeFpNbjVUTjEwbmdjSWlDQmdDR3ZCSkF4Wm1CQklpUk4vSWsxUHR0OGVQamlDN2RvcW5JdjVncGJNY2xmVzN2M29BODl5REVYaCs3enJZaFlENWp6Z1JjalNNa3JvdTNRRmNVdUNhc3FoVm9KYkNIRjVlb3ZlNWJqdHpaMFFPKzhRRXlobm0xNkhldURMSGZQa01HWkF5bEZXWFhMR3orM2dINDhqdHFlUXlFV3d3anlUTFFqbmdRd2NIVFZjTDl3SVJoUlBmVEh4RXR3aUxHeHE2QllJZTB3cVJBL29OZmlGaTF0QUhEWWlBOEh4M3QwVHZZTk1zam9vPQ,,--50&amp;idLote=&amp;numPagBus=">Autoridad gestora</a>
+              </li>
+              <li>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259127&amp;ver=3&amp;idBus=YnZzaUw5NmgrTG9zSGxNMWdVTW84RjhDc2dWK3U2cGpHM0h4cE82d3Nyakd1eEpBdkpsbGpEMVpoeXFubVI3TGhUem02ekZXSE5OUjRwRVFPdU9JL2FQcjNrdGhib1JZaXpSbk5LbVc5MjJvQkJScVIzeFpNbjVUTjEwbmdjSWlDQmdDR3ZCSkF4Wm1CQklpUk4vSWsxUHR0OGVQamlDN2RvcW5JdjVncGJNY2xmVzN2M29BODl5REVYaCs3enJZaFlENWp6Z1JjalNNa3JvdTNRRmNVdUNhc3FoVm9KYkNIRjVlb3ZlNWJqdHpaMFFPKzhRRXlobm0xNkhldURMSGZQa01HWkF5bEZXWFhMR3orM2dINDhqdHFlUXlFV3d3anlUTFFqbmdRd2NIVFZjTDl3SVJoUlBmVEh4RXR3aUxHeHE2QllJZTB3cVJBL29OZmlGaTF0QUhEWWlBOEh4M3QwVHZZTk1zam9vPQ,,--50&amp;idLote=&amp;numPagBus=">Lotes</a>
+              </li>
+              <li>
+                <a href="./detalleSubasta.php?idSub=SUB-JA-2026-259127&amp;ver=5&amp;idBus=YnZzaUw5NmgrTG9zSGxNMWdVTW84RjhDc2dWK3U2cGpHM0h4cE82d3Nyakd1eEpBdkpsbGpEMVpoeXFubVI3TGhUem02ekZXSE5OUjRwRVFPdU9JL2FQcjNrdGhib1JZaXpSbk5LbVc5MjJvQkJScVIzeFpNbjVUTjEwbmdjSWlDQmdDR3ZCSkF4Wm1CQklpUk4vSWsxUHR0OGVQamlDN2RvcW5JdjVncGJNY2xmVzN2M29BODl5REVYaCs3enJZaFlENWp6Z1JjalNNa3JvdTNRRmNVdUNhc3FoVm9KYkNIRjVlb3ZlNWJqdHpaMFFPKzhRRXlobm0xNkhldURMSGZQa01HWkF5bEZXWFhMR3orM2dINDhqdHFlUXlFV3d3anlUTFFqbmdRd2NIVFZjTDl3SVJoUlBmVEh4RXR3aUxHeHE2QllJZTB3cVJBL29OZmlGaTF0QUhEWWlBOEh4M3QwVHZZTk1zam9vPQ,,--50&amp;idLote=&amp;numPagBus=">Pujas</a>
+              </li>
+            </ul>
+          </div>
+          <div id="idBloqueDatos1">
+            <h3>Datos de la subasta</h3>
+            <table>
+              <tr>
+                <th>Identificador</th>
+                <td>
+                  <strong>SUB-JA-2026-259127</strong>
+                </td>
+              </tr>
+              <tr>
+                <th>Tipo de subasta</th>
+                <td>
+                  <strong>JUDICIAL EN V&#xCD;A DE APREMIO</strong>
+                </td>
+              </tr>
+              <tr>
+                <th>Cuenta expediente</th>
+                <td>4513 4420 00 0733 19</td>
+              </tr>
+              <tr>
+                <th>Fecha de inicio</th>
+                <td>24-03-2026 18:00:00 CET  (ISO: 2026-03-24T18:00:00+01:00)</td>
+              </tr>
+              <tr>
+                <th>Fecha de conclusi&#xF3;n</th>
+                <td><strong class="destaca">13-04-2026 18:00:00 CET </strong> (ISO: 2026-04-13T18:00:00+02:00)</td>
+              </tr>
+              <tr>
+                <th>Cantidad reclamada</th>
+                <td>5.908.747,77 &#x20AC;</td>
+              </tr>
+              <tr>
+                <th>Lotes</th>
+                <td>38</td>
+              </tr>
+              <tr>
+                <th>Forma adjudicaci&#xF3;n</th>
+                <td>Separada para cada lote</td>
+              </tr>
+              <tr>
+                <th>Anuncio BOE</th>
+                <td>BOE-B-2026-8759</td>
+              </tr>
+              <tr>
+                <th>Valor subasta</th>
+                <td>Ver valor de subasta en cada lote <strong class="destaca">(los lotes se subastan de forma independiente)</strong></td>
+              </tr>
+              <tr>
+                <th>Tasaci&#xF3;n</th>
+                <td>Ver valor de tasaci&#xF3;n en cada lote <strong class="destaca">(los lotes se subastan de forma independiente)</strong></td>
+              </tr>
+              <tr>
+                <th>Puja m&#xED;nima</th>
+                <td>Ver puja m&#xED;nima de cada lote <strong class="destaca">(adjudicaci&#xF3;n independiente)</strong></td>
+              </tr>
+              <tr>
+                <th>Tramos entre pujas</th>
+                <td>Ver tramos de cada lote <strong class="destaca">(adjudicaci&#xF3;n independiente)</strong></td>
+              </tr>
+              <tr>
+                <th>Importe del dep&#xF3;sito</th>
+                <td>Ver importe de consignaci&#xF3;n de cada lote <strong class="destaca">(adjudicaci&#xF3;n independiente)</strong></td>
+              </tr>
+            </table>
+            <h4>Informaci&#xF3;n complementaria de la subasta</h4>
+            <div class="caja gris">
+              <h5 class="legend">Documentos</h5>
+              <ul class="enlaces">
+                <li class="puntoPDF">
+                  <a href="verDocumento.php?idSub=SUB-JA-2026-259127&amp;idDoc=1-644b1d252b0d5575126d66f25e21745c" target="_blank">EDICTO DEL TRIBUNAL DE INSTANCIA DE SAGUNTO, PLAZA N&#xBA;1; ANUNCIANDO SUBASTA EN SU PROCEDIMIENTO DE EJECUCI&#xD3;N HIPOTECARIA N&#xBA; 733/2019</a>
+                </li>
+                <li class="puntoPDF">
+                  <a href="verDocumento.php?idSub=SUB-JA-2026-259127&amp;idDoc=2-9328baac02084c69de7c27d65a62c428" target="_blank">CERTIFICACION DE CARGAS DE LAS FINCAS OBJETO DE SUBASTA</a>
+                </li>
+                <li class="puntoPDF">
+                  <a href="verDocumento.php?idSub=SUB-JA-2026-259127&amp;idDoc=3-3742e08cab927f5762f4f895526aaa40" target="_blank">certificacion cargas</a>
+                </li>
+                <li class="puntoPDF">
+                  <a href="verDocumento.php?idSub=SUB-JA-2026-259127&amp;idDoc=4-cc95887713f6193e1b77591f06ce72b2" target="_blank">certificacion cargas</a>
+                </li>
+                <li class="puntoPDF">
+                  <a href="verDocumento.php?idSub=SUB-JA-2026-259127&amp;idDoc=5-d8b30114d9f428e5407c746b9c5f9b27" target="_blank">certificacion cargas</a>
+                </li>
+                <li class="puntoPDF">
+                  <a href="verDocumento.php?idSub=SUB-JA-2026-259127&amp;idDoc=6-5d81328a043f1b075e8302553a39b9df" target="_blank">certificacion de cargas</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bloqueBotones">
+            <a class="boton" href="/reg/subastas_ava.php?accion=Mas&id_busqueda=YnZzaUw5NmgrTG9zSGxNMWdVTW84RjhDc2dWK3U2cGpHM0h4cE82d3Nyakd1eEpBdkpsbGpEMVpoeXFubVI3TGhUem02ekZXSE5OUjRwRVFPdU9JL2FQcjNrdGhib1JZaXpSbk5LbVc5MjJvQkJScVIzeFpNbjVUTjEwbmdjSWlDQmdDR3ZCSkF4Wm1CQklpUk4vSWsxUHR0OGVQamlDN2RvcW5JdjVncGJNY2xmVzN2M29BODl5REVYaCs3enJZaFlENWp6Z1JjalNNa3JvdTNRRmNVdUNhc3FoVm9KYkNIRjVlb3ZlNWJqdHpaMFFPKzhRRXlobm0xNkhldURMSGZQa01HWkF5bEZXWFhMR3orM2dINDhqdHFlUXlFV3d3anlUTFFqbmdRd2NIVFZjTDl3SVJoUlBmVEh4RXR3aUxHeHE2QllJZTB3cVJBL29OZmlGaTF0QUhEWWlBOEh4M3QwVHZZTk1zam9vPQ,,--50">Volver a la b&#xFA;squeda</a>
+          </div>
+        </div> <!-- /contenido -->
+      </div> <!-- /contenedor -->
+    </div> <!-- #cuerpo -->
+    <div id="pie">
+      <div id="menuPie">
+        <div class="franjaMenu">
+          <ul>
+            <li><a href="https://subastas.boe.es/textoPolitica.php" target="_blank" title="Abre nueva ventana">Acerca del Portal</a></li>
+          </ul>
+        </div> <!-- .franjaMenu -->
+      </div> <!-- #menuPie -->
+      <div class="franja-pie">
+        <p>Agencia Estatal Bolet&#xED;n Oficial del Estado</p>
+        <p><abbr title="Avenida">Avda.</abbr> de Manoteras, 54 - 28050 Madrid</p>
+      </div>
+    </div> <!-- #pie -->
+    <script src="/lib/js/desplegable.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "case_id": "detail_sensitive_field_redacted_01",
+  "source": "boe",
+  "page_kind": "detail",
+  "fixture_status": "sanitized_from_raw",
+  "origin_url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-257418",
+  "capture_date": "2026-04-08",
+  "raw_file": "../../raw/detail_sensitive_field_redacted_01/raw.html",
+  "sanitized_file": "sanitized.html",
+  "expected_file": "expected.json",
+  "sanitizer_version": 1,
+  "notes": "Sanitized from local raw capture."
+}

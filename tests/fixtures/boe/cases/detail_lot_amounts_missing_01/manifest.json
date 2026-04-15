@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "case_id": "detail_lot_amounts_missing_01",
+  "source": "boe",
+  "page_kind": "detail",
+  "fixture_status": "legacy_sanitized",
+  "origin_url": null,
+  "sanitized_file": "sanitized.html",
+  "expected_file": "expected.json"
+}

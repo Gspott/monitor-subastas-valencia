@@ -1,0 +1,3 @@
+# Convenience install for local development.
+# Prefer: pip install -e ".[web,dev]"
+-e .[web,dev]
